@@ -709,6 +709,7 @@
 	#toggle-user-sidebar,
 	.nav-outer .mobile-nav-toggler{
 		display: flex;
+		justify-content: space-between;
 	}
 
 	.nav-outer .mobile-nav-toggler{
@@ -1223,11 +1224,52 @@
 	.login-form h1 {
 		font-size: 32px;
 		margin-bottom: 10px;
+		line-height: normal;
 	}
 
 	.login-form .bottom-box .btn-box .theme-btn {
 		min-width: initial;
 		padding: 10px 15px;
+		font-size: 12px;
+	}
+
+	.fun-fact-section .category-block-three .content {
+		align-items: center !important;
+	}
+
+	.fun-fact-section .category-block-three p {
+		text-align: center;
+    margin-bottom: 10px;
+	}
+
+	.main-footer .phone-title {
+		font-size: 18px;
+	}
+
+	.main-footer .big-column.mt-50 {
+		margin-top: 20px !important;
+	}
+
+	.main-footer.style-three .big-column > .content > .img-icon {
+		position: relative;
+	}
+	.main-footer.style-three .big-column > .content {
+		padding-left: 0;
+		align-items: center;
+	}
+
+	.main-footer.style-three .social-links {
+		margin-left: 0;
+	}
+
+	.font-bigger {
+		font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 50px;
+	}
+
+	.get_in_touch {
+		text-align: center;
 	}
 
 	.login-form > .form-inner li:before {
@@ -1539,7 +1581,7 @@
 		/*background-color: #143a8f !important;*/
 	}
 	.main-footer.style-three .sec-title #logo-footer {
-			width: 70%;
+			width: 70% !important;
 	}
 	.main-footer.style-three .widget-title {
 		margin-bottom: 10px;

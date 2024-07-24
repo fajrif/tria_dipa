@@ -6223,7 +6223,7 @@ Mobile Header
   font-size: 30px;
   line-height: 30px;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 80px;
   width: 30px;
   color: #202124;
   order: 3;
@@ -19059,15 +19059,15 @@ Product Tabs
 
 @media (max-width: 991px) {
   .banner-section-three.-type-17 .content-column .inner-column {
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: 150px;
+    padding-bottom: 150px;
   }
 }
 
 @media (max-width: 767px) {
   .banner-section-three.-type-17 .content-column .inner-column {
-    padding-top: 380px;
-    padding-bottom: 60px;
+    /*padding-top: 380px;*/
+    /*padding-bottom: 60px;*/
   }
 }
 
