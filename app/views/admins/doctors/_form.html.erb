@@ -1,0 +1,52 @@
+<%= simple_form_for @doctor, url: (@doctor.new_record? ? admins_doctors_path : admins_doctor_path(@doctor.id)), method: (@doctor.new_record? ? :post : :put) do |f| %>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body">
+					<%= f.error_notification %>
+					<fieldset>
+						<%= f.input :photo, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
+						<%= f.input :profesional_name, as: :string %>
+						<%= f.input :full_name, as: :string %>
+						<%= f.input :title, as: :string %>
+						<%= f.input :alumni, as: :string %>
+						<%= f.input :content, as: :rich_text_area %>
+					</fieldset>
+					<%= f.error :base %>
+					<div class="form-actions">
+						<%= f.button :submit, :class => 'btn btn-secondary' %>
+						<% unless @doctor.new_record? %>
+							<%= link_to "Cancel", admins_doctor_path(@doctor.id), :class => 'btn btn-light' %>
+						<% else %>
+							<%= link_to "Cancel", admins_doctors_path, :class => 'btn btn-light' %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<%= render "admins/shared/error_messages", :target => @doctor, col: 'col-lg-12' %>
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-title mb-0">Settings</h5>
+						</div>
+						<div class="card-body">
+							<%= f.input :str_no %>
+							<%= f.input :email %>
+							<%= f.input :phone %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<%= content_for :tail do %>
+	<%= stylesheet_link_tag :actiontext, "data-turbo-track": "reload" %>
+	<%= javascript_include_tag :trix %>
+	<%= javascript_include_tag :actiontext %>
+	<%= javascript_include_tag "trix_config.js" %>
+<% end %>

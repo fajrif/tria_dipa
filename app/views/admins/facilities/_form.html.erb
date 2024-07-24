@@ -1,0 +1,48 @@
+<%= simple_form_for @facility, url: (@facility.new_record? ? admins_facilities_path : admins_facility_path(@facility.id)), method: (@facility.new_record? ? :post : :put) do |f| %>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body">
+					<%= f.error_notification %>
+					<fieldset>
+						<%= f.input :thumbnail, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
+						<%= f.input :image, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
+						<%= f.input :image1, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
+						<%= f.input :image2, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
+						<%= f.input :name, as: :string %>
+						<%= f.input :headline, as: :string %>
+						<%= f.input :description, input_html: { class: 'quill_container' } %>
+						<%= f.input :description1, input_html: { class: 'quill_container' } %>
+						<%= f.input :description2, input_html: { class: 'quill_container' } %>
+					</fieldset>
+					<%= f.error :base %>
+					<div class="form-actions">
+						<%= f.button :submit, :class => 'btn btn-secondary' %>
+						<% unless @facility.new_record? %>
+							<%= link_to "Cancel", admins_facility_path(@facility.id), :class => 'btn btn-light' %>
+						<% else %>
+							<%= link_to "Cancel", admins_facilities_path, :class => 'btn btn-light' %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<%= render "admins/shared/error_messages", :target => @facility, col: 'col-lg-12' %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<%= content_for :tail do %>
+	<script src="https://cdn.quilljs.com/1.1.9/quill.js"></script>
+	<link href="https://cdn.quilljs.com/1.1.9/quill.snow.css" rel="stylesheet">
+	<style>
+		.facility_description,
+		.facility_description1,
+		.facility_description2 {
+			margin-bottom: 100px !important;
+		}
+	</style>
+<% end %>

@@ -1,0 +1,25 @@
+[{
+    "id": 1,
+    "label": "关于我们",
+    "url": "/id/about-us"
+  }, {
+    "id": 2,
+    "label": "文件夹",
+    "url": "/id/portfolio"
+  }, {
+    "id": 3,
+    "label": "可持续发展",
+    "url": "/id/sustainability"
+  }, {
+    "id": 5,
+    "label": "投资者关系",
+    "url": "/id/investor-relations"
+  }, {
+    "id": 6,
+    "label": "新闻媒体",
+    "url": "/id/press-release"
+  }, {
+    "id": 4,
+    "label": "联系我们",
+    "url": "/id/contact-us"
+}]

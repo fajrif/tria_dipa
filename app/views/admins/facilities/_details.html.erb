@@ -1,0 +1,66 @@
+<table class="table table-hover">
+	<tr>
+		<td style="width:15%;"><b>ID</b></td>
+		<td><%= @facility.id %></td>
+	</tr>
+	<tr>
+		<td><b>Name</b></td>
+		<td><h5 class="fs-14 mb-0 text-body"><%= @facility.name %></h5></td>
+	</tr>
+	<tr>
+		<td><b>Slug</b></td>
+		<td><%= link_to facility_path(@facility), facility_path(@facility) %></td>
+	</tr>
+	<% if @facility.thumbnail.attached? %>
+	<tr>
+		<td><b>Thumbnail</b></td>
+		<td>
+			<%= image_tag @facility.thumbnail.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
+	<% if @facility.image.attached? %>
+	<tr>
+		<td><b>Image</b></td>
+		<td>
+			<%= image_tag @facility.image.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
+	<% if @facility.image1.attached? %>
+	<tr>
+		<td><b>Image 1</b></td>
+		<td>
+			<%= image_tag @facility.image1.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
+	<% if @facility.image2.attached? %>
+	<tr>
+		<td><b>Image 2</b></td>
+		<td>
+			<%= image_tag @facility.image2.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
+	<tr>
+		<td><b>Headline</b></td>
+		<td><%= @facility.headline %></td>
+	</tr>
+	<tr>
+		<td><b>Description</b></td>
+		<td><%= raw @facility.description %></td>
+	</tr>
+	<% unless @facility.description2.blank? %>
+	<tr>
+		<td><b>Description 1</b></td>
+		<td><%= raw @facility.description1 %></td>
+	</tr>
+	<% end %>
+	<% unless @facility.description2.blank? %>
+	<tr>
+		<td><b>Description 2</b></td>
+		<td><%= raw @facility.description2 %></td>
+	</tr>
+	<% end %>
+</table>

@@ -1,0 +1,50 @@
+<table class="table table-hover">
+	<tr>
+		<td style="width:15%;"><b>ID</b></td>
+		<td><%= @doctor.id %></td>
+	</tr>
+	<% if @doctor.photo.attached? %>
+	<tr>
+		<td><b>Photo</b></td>
+		<td>
+			<%= image_tag @doctor.photo.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
+	<tr>
+		<td><b>STR No</b></td>
+		<td><%= @doctor.str_no %></td>
+	</tr>
+	<tr>
+		<td><b>Email</b></td>
+		<td><%= @doctor.email %></td>
+	</tr>
+	<tr>
+		<td><b>Phone</b></td>
+		<td><%= @doctor.phone %></td>
+	</tr>
+	<tr>
+		<td><b>Profesional Name</b></td>
+		<td><h5 class="fs-14 mb-0 text-body"><%= @doctor.profesional_name %></h5></td>
+	</tr>
+	<tr>
+		<td><b>Full Name</b></td>
+		<td><%= @doctor.full_name %></td>
+	</tr>
+	<tr>
+		<td><b>Title</b></td>
+		<td><%= @doctor.title %></td>
+	</tr>
+	<tr>
+		<td><b>Slug</b></td>
+		<td><%= link_to doctor_path(@doctor), doctor_path(@doctor) %></td>
+	</tr>
+	<tr>
+		<td><b>Alumni</b></td>
+		<td><%= @doctor.alumni %></td>
+	</tr>
+	<tr>
+		<td><b>Content</b></td>
+		<td><%= raw @doctor.content %></td>
+	</tr>
+</table>
