@@ -1,0 +1,36 @@
+<section class="layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">OUR FACILITIES</h2>
+				<div class="text">Facilities at Tria Dipa Hospital</div>
+			</div>
+		</div>
+
+		<div class="row grid-base layout-pt-100 wow fadeInUp">
+			<% unless @facilities.empty? %>
+				<% @facilities.each do |facility| %>
+				<!-- Blog Block -->
+				<div class="col-md-6 col-sm-12">
+					<div class="blog -type-1" style="margin-bottom:20px;">
+						<div class="blog-image">
+							<%= image_tag url_for(facility.image) %>
+						</div>
+						<div class="blog-content">
+							<h4><%= link_to facility.name, facility_path(facility) %></h4>
+							<div><%= facility.headline.truncate(200) %></div>
+							<a href="<%= facility_path(facility) %>" class="theme-btn btn-style-three small">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<% end %>
+			<% else %>
+				<div class="col-lg-12">
+					<h3>Oops! Not found...</h3>
+				</div>
+			<% end %>
+			<!-- Pagination -->
+			<%= paginate @facilities, theme: :superio %>
+		</div>
+	</div>
+</section>

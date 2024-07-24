@@ -1,49 +1,90 @@
-<%- load_footer_menu -%>
-<!-- start footer -->
-<footer class="footer-modern-dark bg-black text-white-2 padding-three-tb sm-padding-30px-tb">
-	<div class="footer-widget-area padding-40px-bottom sm-padding-30px-bottom">
-		<div class="container-xl">
-			<div class="row align-items-center">
-				<!-- start links -->
-				<div class="col-lg-6 col-md-6 social-style-2 text-center text-md-start">
-					<div class="footer-links">
-						<ul class="text-small margin-20px-top sm-no-margin-bottom text-uppercase p-0 mb-0 list-unstyled">
-							<%= raw generate_footer_link(@footer_menu) %>
-						</ul>
+<%= render "shared/contact" %>
+<!-- Main Footer -->
+<footer class="main-footer style-three">
+	<!--Widgets Section-->
+	<div class="widgets-section">
+		<div class="auto-container">
+			<div class="row">
+				<div class="big-column col-md-12">
+					<div class="sec-title text-center">
+						<%= link_to root_path do %>
+							<%= image_tag('logo.png', id: 'logo-footer', style: "width:30%;") %>
+						<% end %>
 					</div>
-					<%= link_to root_url, class: "margin-20px-bottom sm-margin-40px-bottom d-inline-block" do %>
-						<%= image_tag("logo.png", class: "footer-logo", alt: "Indo Energy Corporation") %>
-					<% end %>
 				</div>
-				<!-- end links -->
-				<%- if address = Address.all -%>
-					<% address.reverse.each_with_index do |adr, index| %>
-						<div class="col-6 col-lg-3 col-md-6 <%= 'padding-five-lr' if index == 0 %> text-center text-md-start sm-margin-20px-bottom">
-							<h6 class="margin-10px-bottom"><%= adr.name %></h6>
-							<span class="d-block text-medium"><%= raw adr.complete_address %></span>
+				<div class="big-column col-md-12">
+					<div class="row">
+						<div class="footer-column col-lg-2 offset-lg-1 col-md-6 col-sm-12">
+							<div class="footer-widget links-widget">
+								<span class="widget-title"><a href="<%= about_path %>">About Us</a></span>
+							</div>
 						</div>
-					<% end %>
-				<% end %>
+						<div class="footer-column col-lg-2 col-md-6 col-sm-12">
+							<div class="footer-widget links-widget">
+								<span class="widget-title"><a href="<%= specialists_path %>">Specialists</a></span>
+							</div>
+						</div>
+						<div class="footer-column col-lg-2 col-md-6 col-sm-12">
+							<div class="footer-widget links-widget">
+								<span class="widget-title"><a href="<%= facilities_path %>">Facilities</a></span>
+							</div>
+						</div>
+						<div class="footer-column col-lg-2 col-md-6 col-sm-12">
+							<div class="footer-widget links-widget">
+								<span class="widget-title"><a href="<%= articles_path %>">News & Event</a></span>
+							</div>
+						</div>
+						<div class="footer-column col-lg-2 col-md-6 col-sm-12">
+							<div class="footer-widget links-widget">
+								<span class="widget-title"><a href="<%= contact_path %>">Contact Us</a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="big-column col-md-12 flex-center mt-50">
+					<div class="content">
+						<div class="img-icon">
+							<%= image_tag('office_hours.png') %>
+						</div>
+						<p>
+							9:00am to 5:00pm on Weekdays<br/>
+							9:00am to 1:00pm on Saturdays
+						</p>
+					</div>
+				</div>
+				<div class="big-column col-md-12 flex-center">
+					<div class="content">
+						<div class="img-icon">
+							<%= image_tag('wa_img.png') %>
+						</div>
+						<h4 class="phone-title text-underline"><%= get_address.phone1 %> (Customer Call)</h4>
+						<h4 class="phone-title text-underline"><%= get_address.phone2 %> (Emergency Call)</h4>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container-xl">
-		<!-- start copyright -->
-		<div class="footer-bottom border-top border-color-medium-dark-gray padding-40px-top sm-padding-30px-top">
-			<div class="row row-cols-1 row-cols-md-2 align-items-center">
-				<div class="col text-md-start text-center text-medium">
-					<div class="social-icon-style-8 d-inline-block align-middle">
-						<ul class="medium-icon mb-0">
-							<li><a class="linkedin text-white-2" href="<%= configatron.social_linkedin_url %>" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-							<li><a class="instagram text-white-2" href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fa-brands fa-instagram no-margin-right"></i></a></li>
-						</ul>
-					</div>
+
+	<!--Bottom-->
+	<div class="footer-bottom">
+		<div class="auto-container">
+			<div class="outer-box">
+				<div class="copyright-text">© 2023 <a href="#">Tria Dipa Hospital</a></div>
+				<div class="social-links">
+					<a href="<%= configatron.social_facebook_url %>" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					<a href="<%= configatron.social_twitter_url %>" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fab fa-square-instagram"></i></a>
+					<a href="<%= configatron.social_youtube_url %>" target="_blank"><i class="fab fa-youtube"></i></a>
+					<a href="<%= configatron.social_tiktok_url %>" target="_blank"><i class="fab fa-tiktok"></i></a>
 				</div>
-				<div class="col text-md-end text-center text-medium">&copy; 2024 Indonesia Energy Corporation</div>
+				<div class="terms-link">
+					<ul class="list">
+						<li><a href="<%= terms_path %>">Terms &amp; Conditions</a></li>
+						<li><a href="<%= privacy_path %>">Privacy Policy</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<!-- end copyright -->
 	</div>
 </footer>
-<!-- end footer -->
-
+<!-- End Main Footer -->

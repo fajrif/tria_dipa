@@ -1,0 +1,32 @@
+<section class="layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-between align-items-end">
+			<div class="col-lg-6">
+				<div class="text text-green mb-9">Tria Dipa Hospital</div>
+				<h2 class="fw-700 text-green">NEWS & EVENT</h2>
+			</div>
+
+			<div class="col-auto d-none d-md-block">
+				<%= link_to "Read All", articles_path, class: "theme-btn btn-style-three" %>
+			</div>
+		</div>
+
+		<div class="row grid-base pt-50 wow fadeInUp">
+			<% @articles.each do |article| %>
+			<!-- Blog Block -->
+			<div class="col-xl-3 col-lg-3 col-md-6 col-6">
+				<div class="blog -type-1">
+					<div class="blog-image">
+						<%= image_tag url_for(article.thumbnail) %>
+					</div>
+					<div class="blog-content">
+						<h4><%= link_to article.title, article_path(article) %></h4>
+						<div><%= article.headline.truncate(100) %></div>
+						<a href="<%= article_path(article) %>" class="theme-btn btn-style-three small">Read More</a>
+					</div>
+				</div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</section>

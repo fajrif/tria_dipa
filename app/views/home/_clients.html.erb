@@ -1,0 +1,10 @@
+<div class="sponsors-outer wow fadeInUp">
+	<!--Sponsors Carousel-->
+	<ul class="sponsors-carousel owl-carousel owl-theme">
+		<% @clients.each do |client| %>
+		<li class="slide-item">
+			<figure class="image-box"><a href="#"><%= image_tag(url_for(client.logo)) %></a></figure>
+		</li>
+		<% end %>
+	</ul>
+</div>

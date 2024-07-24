@@ -1,0 +1,56 @@
+<section class="specialists-section layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">BROWSE SPECIALISTS</h2>
+				<div class="text">
+					Find a Doctor and Schedule an appointment
+					at Rumah Sakit Tria Dipa
+				</div>
+			</div>
+		</div>
+
+		<div class="row align-items-center layout-pb-60">
+			<div class="content-column col-lg-12 col-md-12 col-sm-12">
+				<div class="inner-column d-lg-flex justify-content-center">
+					<%= render "home/search_form" %>
+				</div>
+			</div>
+		</div>
+
+		<% if mobile_device? %>
+			<div class="row justify-content-center align-items-center grid-base wow fadeInUp">
+				<% @specialists.each do |specialist| %>
+					<!-- Category Block -->
+					<div class="category-block-three col-lg col-md-6 col-sm-6 col-6">
+						<div class="inner-box">
+							<div class="content">
+								<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+								<h4><%= link_to specialist.name, specialist_path(specialist) %></h4>
+								<p><%= specialist.headline.truncate(100) %></p>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		<% else %>
+			<% @specialists.each_slice(5) do |specialists| %>
+				<div class="row justify-content-center align-items-center grid-base wow fadeInUp">
+					<% specialists.each do |specialist| %>
+						<!-- Category Block -->
+						<div class="category-block-three col-lg col-md-6 col-sm-6">
+							<div class="inner-box">
+								<div class="content">
+									<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+									<h4><%= link_to specialist.name, specialist_path(specialist) %></h4>
+									<p><%= specialist.headline.truncate(100) %></p>
+								</div>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+		<% end %>
+
+	</div>
+</section>

@@ -242,10 +242,6 @@ module AdminHelper
 		end
 	end
 
-  def is_home_page?
-    controller.controller_name == "home" && controller.action_name == "index"
-  end
-
 	def is_admins_dashboard_page?
 		controller.controller_name == "dashboard"
 	end

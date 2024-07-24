@@ -1,0 +1,23 @@
+<!-- Call To Action Two -->
+<section class="call-to-action-two bg-green">
+	<div class="auto-container wow fadeInUp">
+		<div class="row grid-base justify-content-center">
+			<div class="col-lg-6 col-md-10">
+				<div class="sec-title light text-center">
+					<div class="text">Say Hello!</div>
+					<h2>WE’D LOVE TO HEAR FROM YOU</h2>
+				</div>
+
+				<div class="btn-box">
+					<%= link_to "mailto:#{get_address.email1}", class: "theme-btn btn-style-three btn-transparent text-lowercase" do %>
+						<%= get_address.email1 %>
+						<span class="icon-special">
+							<i class="fa fa-envelope" style="font-size:20px;margin-top:9px;"></i>
+						</span>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Call To Action -->

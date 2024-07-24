@@ -1,0 +1,17 @@
+<!-- Job Search Form -->
+<div class="job-search-form wow fadeInUp" data-wow-delay="1000ms">
+	<%= form_tag specialists_url, { :method => :get } do %>
+		<div class="row justify-content-between">
+			<!-- Form Group -->
+			<div class="form-group col-8">
+				<%= text_field_tag :search, params[:search], placeholder: "Find Doctor, Specialty, Specialist or Pharmacy", autocomplete: "off" %>
+			</div>
+
+			<!-- Form Group -->
+			<div class="form-group col-auto">
+				<button type="submit" class="theme-btn btn-style-two">Search</button>
+			</div>
+		</div>
+	<% end %>
+</div>
+<!-- Job Search Form -->

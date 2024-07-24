@@ -1,0 +1,36 @@
+<section class="layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">OUR INSTITUTIONS</h2>
+				<div class="text">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor</div>
+			</div>
+		</div>
+
+		<div class="row grid-base layout-pt-100 wow fadeInUp">
+			<% unless @institutions.empty? %>
+				<% @institutions.each do |institution| %>
+				<!-- Blog Block -->
+				<div class="col-md-6 col-sm-12">
+					<div class="blog -type-1" style="margin-bottom:20px;">
+						<div class="blog-image">
+							<%= image_tag url_for(institution.image) %>
+						</div>
+						<div class="blog-content">
+							<h4><%= link_to institution.name, institution_path(institution) %></h4>
+							<div><%= institution.headline.truncate(200) %></div>
+							<a href="<%= institution_path(institution) %>" class="theme-btn btn-style-three small">Learn More</a>
+						</div>
+					</div>
+				</div>
+				<% end %>
+			<% else %>
+				<div class="col-lg-12">
+					<h3>Oops! Not found...</h3>
+				</div>
+			<% end %>
+			<!-- Pagination -->
+			<%= paginate @institutions, theme: :superio %>
+		</div>
+	</div>
+</section>

@@ -10,45 +10,42 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require bootsnav.css
- *= require theme-vendors.min.css
- *= require bootstrap-select.min.css
+ *= require bootstrap.css
+ *= require icons2.css
+ *= require flaticon.css
+ *= require fontawesome-all.css
+ *= require animate.css
+ *= require owl.css
+ *= require jquery-ui.min.css
+ *= require select2.min.css
+ *= require jquery.modal.min.css
+ *= require chosen
+ *= require line-awesome.css
+ *= require mmenu.css
+ *= require jquery.fancybox.min.css
  *= require style.css
- *= require custom.css
  *= require responsive.css
  *= require_self
- */
+*/
 
-@media (max-width: 991px) {
-	nav.navbar.bootsnav .navbar-nav {
-		background-color: rgba(0, 0, 0, 0.95);
-	}
-	.center-logo {
-		padding: 10px 15px 10px 0;
-	}
+.alert {
+	border-radius: unset;
+  margin-bottom: 0;
+  padding: 10px 40px;
 }
-
-.alert a {
-	color: #fff;
-	font-weight: 500;
-}
-
 .alert-danger {
-	--bs-alert-color: #fff;
-	--bs-alert-bg: var(--bs-form-invalid-color);
-	--bs-alert-border-color: var(--bs-form-invalid-color);
-	--bs-alert-link-color: #fff;
-	margin-bottom: 2rem;
+	color: #ffffff;
+	background-color: var(--redColor);
+	border-color: var(--redColor);
 }
 .alert-success {
-	--bs-alert-color: #fff;
-	--bs-alert-bg: var(--green-color);
-	--bs-alert-border-color: var(--very-light-green-color);
-	--bs-alert-link-color: #fff;
-	margin-bottom: 2rem;
+	color: #fff;
+	background-color: #013D79;
+	border-color: #013D79;
 }
-.btn-close {
-	--bs-btn-close-color: #fff;
-	opacity: 1;
+.alert-dismissible .btn-close {
+	padding: 0.7rem 1rem;
+	color: #fff;
 	background: none;
+	opacity: 1;
 }

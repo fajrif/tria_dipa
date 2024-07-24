@@ -10,25 +10,19 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery-ui
+//= require jquery.js
 //= require jquery_ujs
-//= require jquery.remotipart
-//= require bootsnav.js
-//= require jquery.nav.js
-//= require hamburger-menu.js
-//= require theme-vendors.min.js
-//= require bootstrap-select.min.js
-//= require main.js
-
-jQuery(document).ready(function($){
-	// Search
-	if (history && history.pushState) {
-		$(".filter_select").change(function(e) {
-			$.get($("#index_search").attr("action"), $("#index_search").serialize(), {module:"leave"}, "script");
-			history.replaceState({module:"leave"}, document.title, $("#index_search").attr("action") + "?" + $("#index_search").serialize());
-			e.preventDefault();
-		});
-	}
-
-});
+//= require popper.min.js
+//= require chosen-jquery
+//= require bootstrap.min.js
+//= require jquery.fancybox.js
+//= require jquery.modal.min.js
+//= require mmenu.polyfills.js
+//= require mmenu.js
+//= require appear.js
+//= require anm.min.js
+//= require ScrollMagic.min.js
+//= require rellax.min.js
+//= require owl.js
+//= require wow.js
+//= require script.js

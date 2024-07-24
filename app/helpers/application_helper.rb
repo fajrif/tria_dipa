@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-	def is_mobile_request?
+	def mobile_device?
 		request.user_agent =~ /Mobile|webOS/
 	end
 
@@ -24,5 +24,38 @@ module ApplicationHelper
 			Nokogiri::HTML.parse(desc).css('div')[0].text
 		end
   end
+
+	def get_address
+		@address ||= Address.first
+	end
+
+	def is_home_page?
+		controller.controller_name == "home" && controller.action_name == "index"
+	end
+
+	def is_about_page?
+		controller.controller_name == "home" && controller.action_name == "about"
+	end
+
+	def is_facilities_page?
+		controller.controller_name == "facilities"
+	end
+
+	def is_institutions_page?
+		controller.controller_name == "institutions"
+	end
+
+	def is_news_page?
+		controller.controller_name == "articles"
+	end
+
+	def is_specialists_page?
+		controller.controller_name == "specialists" ||
+		controller.controller_name == "doctors"
+	end
+
+	def is_contact_page?
+		controller.controller_name == "contacts"
+	end
 
 end

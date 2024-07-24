@@ -1,0 +1,7 @@
+<li class="next">
+	<% unless current_page.last? %>
+		<%= link_to url, rel: 'next', remote: remote do %>
+			<i class="fa fa-arrow-right"></i>
+		<% end %>
+	<% end %>
+</li>

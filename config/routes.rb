@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 			get "account/change_password" => "accounts#change_password", :as => :change_password
 			put "account/update_password" => "accounts#update_password", :as => :update_password
 
-
 			get "link_buttons/objectable_types" => "link_buttons#objectable_types", :as => :link_button_objectable_types
 
 			resources :banners do
@@ -71,19 +70,18 @@ Rails.application.routes.draw do
 
 		# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 		# i18n Scope for id
-
-		resources :contacts, :only => [:create]
+		resource :contact, :only => [:show]
 		resources :articles, :only => [:index, :show]
 		resources :facilities, :only => [:index, :show]
-		resources :institutions, :only => [:index, :show]
+		# resources :institutions, :only => [:index, :show]
 		resources :doctors, :only => [:index, :show]
 		resources :specialists, :only => [:index, :show]
 
 		match 'terms', to: 'home#terms', via: :get, as: :terms
 		match 'privacy', to: 'home#privacy', via: :get, as: :privacy
-		match 'about', to: 'home#about', via: :get
+		match 'about', to: 'home#about', via: :get, as: :about
 
-		match "/search", :to => 'search#index', via: :post, as: :search
+		# match "/search", :to => 'search#index', via: :post, as: :search
 		# route to pages
 		# match ":id", :to => 'pages#show', via: :get, as: :page
 		match "/404", to: "errors#not_found", via: :all

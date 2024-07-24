@@ -1,20 +1,23 @@
-class InvestorInquiriesController < ApplicationController
+class ContactsController < ApplicationController
+
+	def show
+	end
 
   def create
 		@success = false
-		@investor_inquiry = InvestorInquiry.new(params_investor_inquiry)
+		@inquiry = Contact.new(params_contact)
 
-		if @investor_inquiry.valid?
+		if @inquiry.valid?
 
-			unless @investor_inquiry.use_v2.blank?
-				unless TriaDipa::Recaptcha.verify_recaptcha_v2?(params['g-recaptcha-response'], 'investor_inquiry')
+			unless @inquiry.use_v2.blank?
+				unless TriaDipa::Recaptcha.verify_recaptcha_v2?(params['g-recaptcha-response'], 'contact')
 					flash[:alert] = t('global.recaptcha_failed')
 					@show_recaptcha_v2 = true
 				else
 					create_data
 				end
 			else
-				unless TriaDipa::Recaptcha.verify_recaptcha?(params[:recaptcha_token], 'investor_inquiry')
+				unless TriaDipa::Recaptcha.verify_recaptcha?(params[:recaptcha_token], 'contact')
 					flash[:alert] = t('global.recaptcha_failed')
 					@show_recaptcha_v2 = true
 				else
@@ -33,15 +36,15 @@ class InvestorInquiriesController < ApplicationController
 
   private
 
-  def params_investor_inquiry
-    params.require(:investor_inquiry).permit(:name, :email, :phone, :message, :subject, :company_name, :use_v2)
+  def params_contact
+    params.require(:investor_inquiry).permit(:name, :email, :phone, :message, :subject, :use_v2)
   end
 
 	def create_data
-		if @investor_inquiry.save
+		if @inquiry.save
 			flash[:notice] = t('inquiries.success')
 			@success = true
-			@investor_inquiry = InvestorInquiry.new
+			@inquiry = Contact.new
 		else
 			flash[:alert] = t('inquiries.errors')
 		end

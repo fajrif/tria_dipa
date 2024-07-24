@@ -1,0 +1,64 @@
+<section class="layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">DOCTOR INFO</h2>
+				<div class="text">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- About Section -->
+<section class="about-section style-two layout-pt-0">
+	<div class="auto-container">
+		<div class="row">
+			<!-- Image Column -->
+			<div class="image-column col-lg-6 col-md-12 col-sm-12">
+				<figure class="image wow fadeInLeft">
+					<%= image_tag url_for(@doctor.photo) %>
+				</figure>
+			</div>
+
+			<!-- Content Column -->
+			<div class="content-column col-lg-6 col-md-12 col-sm-12">
+				<div class="inner-column wow fadeInUp">
+					<div class="sec-title">
+						<h2 style="margin-bottom:20px;"><%= @doctor.profesional_name %></h2>
+						<span style="font-size:18px;"><strong><%= @doctor.title %></strong></span>
+						<div class="text mr-20">
+							<%= raw @doctor.profile %>
+						</div>
+						<span class="text-green" style="font-size:18px;"><strong>SCHEDULES</strong></span>
+						<ul>
+							<li>Senin	: 17:30 - 20:00</li>
+							<li>Rabu	: 17:30 - 20:00</li>
+						</ul>
+						<span class="text-green" style="font-size:18px;"><strong>ALUMNI</strong></span>
+						<p><%= @doctor.alumni %></p>
+						<span class="text-green" style="font-size:18px;"><strong>STR NUMBER</strong></span>
+						<p><%= @doctor.str_no %></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+<%= render "other_doctors" unless @doctors.empty? %>
+
+<style>
+	.content-column {
+		margin-bottom: 0 !important;
+	}
+	.content-column ul,
+	.content-column p{
+		margin-bottom: 20px;
+	}
+	.text p {
+		margin-bottom: 20px;
+	}
+	.about-section.style-two .content-column h2 {
+		font-size: 30px;
+	}
+</style>

@@ -1,0 +1,27 @@
+<section class="top-companies">
+	<div class="auto-container">
+		<div class="sec-title">
+			<div class="text text-green mb-9">Tria Dipa Hospital</div>
+			<h2 class="fw-700 text-green">OUR FACILITIES</h2>
+		</div>
+
+		<div class="carousel-outer wow fadeInUp">
+			<div class="companies-carousel owl-carousel owl-theme default-dots">
+				<% @facilities.each do |facility| %>
+
+				<!-- Company Block -->
+				<div class="company-block">
+					<div class="inner-box">
+						<figure class="image">
+							<%= image_tag facility.thumbnail.variant(resize: "276x276").processed %>
+						</figure>
+						<h4 class="name"><%= facility.name %></h4>
+						<div class="location"><%= facility.headline.truncate(100) %></div>
+						<%= link_to "Learn More", facility_path(facility), class: "theme-btn btn-style-three small" %>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</section>

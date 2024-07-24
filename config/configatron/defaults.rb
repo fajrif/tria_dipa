@@ -15,4 +15,3 @@ configatron.social_instagram_url = "https://www.instagram.com/"
 configatron.social_instagram_url = "https://www.instagram.com/"
 configatron.social_youtube_url = "https://www.youtube.com/"
 configatron.social_tiktok_url = "https://www.tiktok.com/"
-

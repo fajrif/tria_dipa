@@ -1,0 +1,28 @@
+<section class="specialists-section layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">FIND DOCTOR BY SCHEDULES</h2>
+				<div class="text">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor</div>
+			</div>
+		</div>
+
+		<div class="row align-items-center">
+			<div class="content-column col-lg-12 col-md-12 col-sm-12">
+				<div class="inner-column flex-center">
+					<%= render "home/search_form" %>
+				</div>
+			</div>
+		</div>
+
+		<div class="row grid-base pt-50 wow fadeInUp">
+			<% unless @doctors.empty? %>
+				<%= render partial: "doctor", collection: @doctors %>
+			<% else %>
+				<div class="col-lg-12">
+					<h3>Oops! Data Not found...</h3>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>

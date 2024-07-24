@@ -1,0 +1,40 @@
+<section class="layout-pt-100 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-12 col-lg-6">
+				<h1 class="fw-700 font-bigger">
+					GET IN<span class="text-orange d-block">TOUCH</span>
+				</h1>
+			</div>
+			<div class="col-12 col-lg-6">
+
+				<div class="d-flex justify-content-start mb-50">
+					<div class="img-icon me-40">
+						<%= image_tag('icons/location2.png') %>
+					</div>
+					<p>
+						<%= raw get_address.complete_address %>
+					</p>
+				</div>
+
+				<div class="d-flex justify-content-start mb-50">
+					<div class="img-icon me-40">
+						<%= image_tag('icons/phone.png') %>
+					</div>
+					<div>
+						<span class="d-block"><%= get_address.phone1 %> (Customer Call)</span>
+						<span class="d-block"><%= get_address.phone2 %> (Emergency Call)</span>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-start">
+					<div class="img-icon me-40">
+						<%= image_tag('icons/email.png') %>
+					</div>
+					<%= link_to get_address.email1, "mailto:#{get_address.email1}", class: "text-black" %>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
