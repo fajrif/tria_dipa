@@ -49,3 +49,33 @@
 	background: none;
 	opacity: 1;
 }
+.border-radius-8 {
+	border-radius: 8px;
+}
+
+.whatsapp-wrapper {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	overflow: hidden;
+	z-index: 9811 !important;
+}
+.whatsapp-wrapper > a > img {
+	width: 50px;
+}
+.emergency-call {
+	background-color: red;
+	border-radius: 20px;
+	font-weight: 600;
+	padding: 10px 20px;
+}
+
+.banner-home {
+	background-size: auto !important;
+}
+@media (max-width: 767px) {
+	.banner-home {
+		background-size: cover !important;
+		background-position: 50% center !important
+	}
+}

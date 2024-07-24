@@ -11,7 +11,7 @@
 	<div class="auto-container">
 		<div class="row justify-content-between">
 			<div class="col-lg-12 text-center pt-30 pb-30">
-				<%= image_tag @facility.image.variant(resize: "1132x390").processed %>
+				<%= image_tag @facility.image.variant(resize: "1132x390").processed, class: "border-radius-8" %>
 			</div>
 			<div class="col-lg-12">
 				<div class="margin-left-right-150">
@@ -21,10 +21,10 @@
 		</div>
 		<div class="row justify-content-between align-items-center">
 			<div class="col-lg-6 img1 pt-30 pb-30 text-center">
-				<%= image_tag @facility.image1.variant(resize: "500x500").processed if @facility.image1.attached? %>
+				<%= image_tag @facility.image1.variant(resize: "500x500").processed, class: "border-radius-8" if @facility.image1.attached? %>
 			</div>
 			<div class="col-lg-6 img2 pt-30 pb-30 text-center">
-				<%= image_tag @facility.image2.variant(resize: "500x500").processed if @facility.image2.attached? %>
+				<%= image_tag @facility.image2.variant(resize: "500x500").processed, class: "border-radius-8" if @facility.image2.attached? %>
 			</div>
 			<div class="col-lg-6">
 				<%= raw @facility.description1 %>

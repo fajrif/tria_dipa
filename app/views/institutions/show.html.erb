@@ -16,13 +16,13 @@
 	<div class="auto-container">
 		<div class="row justify-content-between align-items-center">
 			<div class="col-lg-12 text-center pt-30 text-center">
-				<%= image_tag @institution.image.variant(resize: "1132x390").processed, style: "width:90%;" %>
+				<%= image_tag @institution.image.variant(resize: "1132x390").processed, class: "border-radius-8", style: "width:90%;" %>
 			</div>
 			<div class="col-lg-6 img1 pt-30 pb-30 text-center">
-				<%= image_tag @institution.image1.variant(resize: "500x500").processed if @institution.image1.attached? %>
+				<%= image_tag @institution.image1.variant(resize: "500x500").processed, class: "border-radius-8" if @institution.image1.attached? %>
 			</div>
 			<div class="col-lg-6 img2 pt-30 pb-30 text-center">
-				<%= image_tag @institution.image2.variant(resize: "500x500").processed if @institution.image2.attached? %>
+				<%= image_tag @institution.image2.variant(resize: "500x500").processed, class: "border-radius-8" if @institution.image2.attached? %>
 			</div>
 			<div class="col-lg-6">
 				<%= raw @institution.description1 %>

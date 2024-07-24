@@ -25,7 +25,9 @@
 					<div class="category-block-three col-lg col-md-6 col-sm-6 col-6">
 						<div class="inner-box">
 							<div class="content">
-								<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+								<a href="<%= specialist_path(specialist) %>">
+									<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+								</a>
 								<h4><%= link_to specialist.name, specialist_path(specialist) %></h4>
 								<p><%= specialist.headline.truncate(100) %></p>
 							</div>
@@ -41,7 +43,9 @@
 						<div class="category-block-three col-lg col-md-6 col-sm-6">
 							<div class="inner-box">
 								<div class="content">
-									<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+									<a href="<%= specialist_path(specialist) %>">
+										<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+									</a>
 									<h4><%= link_to specialist.name, specialist_path(specialist) %></h4>
 									<p><%= specialist.headline.truncate(100) %></p>
 								</div>

@@ -9,7 +9,7 @@ class Article < ApplicationRecord
 
 	translates :content, backend: :action_text
 
-	default_scope { order(published_date: :desc) }
+	default_scope { order(published_date: :asc) }
 
 	has_one_attached :image, dependent: :purge
 	has_one_attached :thumbnail, dependent: :purge

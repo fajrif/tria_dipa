@@ -5,6 +5,8 @@ class Institution < ApplicationRecord
 	extend FriendlyId
   friendly_id :name, use: :slugged
 
+	default_scope { order(id: :asc) }
+
 	has_one_attached :thumbnail, dependent: :purge
 	has_one_attached :image, dependent: :purge
 	has_one_attached :image1, dependent: :purge

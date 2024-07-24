@@ -1952,7 +1952,7 @@ Buttons Styles
 
 .btn-style-one:hover {
   color: #ffffff;
-  background-color: #0146A6;
+  /*background-color: #0146A6;*/
 }
 
 /* Btn Style Two */
@@ -2546,6 +2546,7 @@ Top Companies
   align-items: center;
   justify-content: center;
   font-size: 14px;
+	line-height: 22px;
   color: #181818;
   margin-bottom: 25px;
 }

@@ -14,7 +14,9 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="blog -type-1" style="margin-bottom:20px;">
 						<div class="blog-image">
-							<%= image_tag url_for(facility.image) %>
+							<a href="<%= facility_path(facility) %>">
+								<%= image_tag url_for(facility.image), class: "border-radius-8" %>
+							</a>
 						</div>
 						<div class="blog-content">
 							<h4><%= link_to facility.name, facility_path(facility) %></h4>
