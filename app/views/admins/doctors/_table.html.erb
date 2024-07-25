@@ -13,7 +13,13 @@
 			<% for doctor in @doctors %>
 				<tr>
 					<td class="text-center"><%= doctor.id %></td>
-					<td><%= image_tag doctor.photo.variant(resize_to_limit: [100,100]) if doctor.photo.attached? %></td>
+					<td>
+						<% if doctor.photo.attached? %>
+							<%= image_tag doctor.photo.variant(resize_to_limit: [100,100]) %>
+						<% else %>
+							<%= image_tag "doctor-avatar.png", style: "height:100px;" %>
+						<% end %>
+					</td>
 					<td>
 						<h5 class="fs-14 mb-1"><%= link_to doctor.profesional_name, admins_doctor_path(doctor.id), class: "text-body" %></h5>
 						<p class="text-muted mb-0">Name : <%= doctor.full_name %></p>

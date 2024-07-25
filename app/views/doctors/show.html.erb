@@ -16,7 +16,11 @@
 			<!-- Image Column -->
 			<div class="image-column col-lg-6 col-md-12 col-sm-12">
 				<figure class="image wow fadeInLeft">
-					<%= image_tag url_for(@doctor.photo) %>
+					<% if @doctor.photo.attached? %>
+						<%= image_tag url_for(@doctor.photo) %>
+					<% else %>
+						<%= image_tag "doctor-avatar.png", class: "border-radius-8" %>
+					<% end %>
 				</figure>
 			</div>
 
@@ -26,8 +30,8 @@
 					<div class="sec-title">
 						<h2 style="margin-bottom:20px;"><%= @doctor.profesional_name %></h2>
 						<span style="font-size:18px;"><strong><%= @doctor.title %></strong></span>
-						<div class="text mr-20">
-							<%= raw @doctor.profile %>
+						<div class="text mr-20 mb-20" style="font-size:18px;">
+							<%= raw @doctor.content %>
 						</div>
 						<span class="text-green" style="font-size:18px;"><strong>SCHEDULES</strong></span>
 						<ul>

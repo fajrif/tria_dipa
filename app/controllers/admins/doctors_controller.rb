@@ -45,10 +45,18 @@ class Admins::DoctorsController < Admins::BaseController
     redirect_to admins_doctors_url, :notice => "Successfully destroyed doctor."
   end
 
+	def delete_attachment_image
+		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
+			flash[:notice] = "Successfully delete image."
+			@doctor.photo.purge
+		end
+		redirect_to admins_doctor_path(@doctor.id)
+	end
+
   private
 
   def params_doctor
-    params.require(:doctor).permit(:email, :str_no, :profesional_name, :full_name, :title, :phone, :alumni, :photo, :content)
+    params.require(:doctor).permit(:email, :str_no, :profesional_name, :full_name, :title, :phone, :alumni, :photo, :content, specialist_ids: [])
   end
 
   def set_doctor

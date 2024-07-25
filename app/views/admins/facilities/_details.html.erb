@@ -32,6 +32,9 @@
 		<td><b>Image 1</b></td>
 		<td>
 			<%= image_tag @facility.image1.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_facility_path(@facility.id, @facility.image1.id, "image1"), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
 		</td>
 	</tr>
 	<% end %>
@@ -40,6 +43,9 @@
 		<td><b>Image 2</b></td>
 		<td>
 			<%= image_tag @facility.image2.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_facility_path(@facility.id, @facility.image2.id, "image2"), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
 		</td>
 	</tr>
 	<% end %>

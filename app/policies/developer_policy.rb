@@ -40,6 +40,10 @@ class DeveloperPolicy < ApplicationPolicy
 		only_admin_developer
 	end
 
+	def delete_attachment_image?
+		only_admin_developer
+	end
+
 	def delete_attachment_locale?
 		only_admin_developer
 	end

@@ -44,6 +44,18 @@ class Admins::InstitutionsController < Admins::BaseController
     redirect_to admins_institutions_url, :notice => "Successfully destroyed institution."
   end
 
+	def delete_attachment_image
+		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
+			if field = params[:field]
+				if obj = @institution.try(field.to_sym)
+					flash[:notice] = "Successfully delete image."
+					obj.purge
+				end
+			end
+		end
+		redirect_to admins_institution_path(@institution.id)
+	end
+
   private
 
   def params_institution

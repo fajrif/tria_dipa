@@ -36,6 +36,12 @@
 							<%= f.input :str_no %>
 							<%= f.input :email %>
 							<%= f.input :phone %>
+							<label class="col-form-label pt-0">Specialities</label>
+							<%= f.association :specialists,
+														 as: :check_boxes,
+														 label_method: :name,
+														 value_method: :id,
+														 legend_tag: false %>
 						</div>
 					</div>
 				</div>

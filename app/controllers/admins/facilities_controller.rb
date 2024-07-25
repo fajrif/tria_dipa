@@ -44,6 +44,18 @@ class Admins::FacilitiesController < Admins::BaseController
     redirect_to admins_facilities_url, :notice => "Successfully destroyed facility."
   end
 
+	def delete_attachment_image
+		if @asset = ActiveStorage::Attachment.find(params[:asset_id])
+			if field = params[:field]
+				if obj = @facility.try(field.to_sym)
+					flash[:notice] = "Successfully delete image."
+					obj.purge
+				end
+			end
+		end
+		redirect_to admins_facility_path(@facility.id)
+	end
+
   private
 
   def params_facility

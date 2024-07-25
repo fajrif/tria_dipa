@@ -3,14 +3,19 @@
 		<td style="width:15%;"><b>ID</b></td>
 		<td><%= @doctor.id %></td>
 	</tr>
-	<% if @doctor.photo.attached? %>
 	<tr>
 		<td><b>Photo</b></td>
 		<td>
-			<%= image_tag @doctor.photo.variant(resize_to_limit: [100,100]) %>
+			<% if @doctor.photo.attached? %>
+				<%= image_tag @doctor.photo.variant(resize_to_limit: [100,100]) %>
+				<%= link_to delete_attachment_image_admins_doctor_path(@doctor.id, @doctor.photo.id), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+					<i class="ri-delete-bin-fill"></i>
+				<% end %>
+			<% else %>
+				<%= image_tag "doctor-avatar.png", style: "width:100px;" %>
+			<% end %>
 		</td>
 	</tr>
-	<% end %>
 	<tr>
 		<td><b>STR No</b></td>
 		<td><%= @doctor.str_no %></td>
@@ -42,6 +47,10 @@
 	<tr>
 		<td><b>Alumni</b></td>
 		<td><%= @doctor.alumni %></td>
+	</tr>
+	<tr>
+		<td><b>Specialities</b></td>
+		<td><%= @doctor.specialists.map(&:name) %></td>
 	</tr>
 	<tr>
 		<td><b>Content</b></td>

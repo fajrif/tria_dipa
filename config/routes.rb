@@ -57,10 +57,22 @@ Rails.application.routes.draw do
 			resources :archive_types
 			resources :questions
 			resources :specialists
-			resources :facilities
-			resources :institutions
 			resources :testimonials
-			resources :doctors
+			resources :facilities do
+				member do
+					delete "delete_attachment_image/:asset_id/field/:field" => "facilities#delete_attachment_image", :as => :delete_attachment_image
+				end
+			end
+			resources :institutions do
+				member do
+					delete "delete_attachment_image/:asset_id/field/:field" => "institutions#delete_attachment_image", :as => :delete_attachment_image
+				end
+			end
+			resources :doctors do
+				member do
+					delete "delete_attachment_image/:asset_id" => "doctors#delete_attachment_image", :as => :delete_attachment_image
+				end
+			end
 			resources :addresses do
 				collection do
 					patch :sort

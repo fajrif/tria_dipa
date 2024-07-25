@@ -9,13 +9,16 @@
 	</tr>
 	<tr>
 		<td><b>Slug</b></td>
-		<td><%= link_to institution_path(@institution), institution_path(@institution) %></td>
+		<td><%= @institution.slug %></td>
 	</tr>
 	<% if @institution.thumbnail.attached? %>
 	<tr>
 		<td><b>Thumbnail</b></td>
 		<td>
 			<%= image_tag @institution.thumbnail.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_institution_path(@institution.id, @institution.thumbnail.id, "thumbnail"), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
 		</td>
 	</tr>
 	<% end %>
@@ -32,6 +35,9 @@
 		<td><b>Image 1</b></td>
 		<td>
 			<%= image_tag @institution.image1.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_institution_path(@institution.id, @institution.image1.id, "image1"), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
 		</td>
 	</tr>
 	<% end %>
@@ -40,6 +46,9 @@
 		<td><b>Image 2</b></td>
 		<td>
 			<%= image_tag @institution.image2.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_institution_path(@institution.id, @institution.image2.id, "image2"), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
 		</td>
 	</tr>
 	<% end %>
