@@ -1,0 +1,56 @@
+<% title_page("Appointment Details") %>
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="card card-box">
+			<div class="card-body">
+				<table class="table table-hover">
+					<tr>
+						<td style="width:15%;"><b>ID</b></td>
+						<td><%= @appointment.id %></td>
+					</tr>
+					<tr>
+						<td><b>Full Name</b></td>
+						<td><h5 class="fs-14 mb-0 text-body"><%= @appointment.full_name %></h5></td>
+					</tr>
+					<tr>
+						<td><b>Email</b></td>
+						<td><%= link_to @appointment.email, "mailto:#{@appointment.email}" %></td>
+					</tr>
+					<tr>
+						<td><b>Phone</b></td>
+						<td><%= @appointment.phone %></td>
+					</tr>
+					<tr>
+						<td><b>Message</b></td>
+						<td><%= @appointment.message %></td>
+					</tr>
+					<tr>
+						<td><b>Doctor</b></td>
+						<td><%= link_to @appointment.try(:doctor).try(:profesional_name), admins_doctor_path(@appointment.try(:doctor).try(:id)) %></td>
+					</tr>
+					<tr>
+						<td><b>Session Date</b></td>
+						<td><%= @appointment.session_date.strftime('%d/%m/%Y') %></td>
+					</tr>
+					<tr>
+						<td><b>Session Time</b></td>
+						<td><%= @appointment.session_time %></td>
+					</tr>
+					<tr>
+						<td><b>Created At</b></td>
+						<td><%= @appointment.created_at.strftime('%d/%m/%Y %H:%M') %></td>
+					</tr>
+					<tr>
+						<td><b>Updated At</b></td>
+						<td><%= @appointment.updated_at.strftime('%d/%m/%Y %H:%M') %></td>
+					</tr>
+				</table>
+				<div class="form-actions">
+					<%= link_to 'Edit', edit_admins_appointment_path(@appointment.id), :class => 'btn btn-secondary' %>
+					<%= link_to 'Destroy', admins_appointment_path(@appointment.id), :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger' %>
+					<%= link_to 'View All', admins_appointments_path, :class => 'btn btn-light' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

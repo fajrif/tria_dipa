@@ -1,0 +1,26 @@
+<% @doctor_schedules.each do |doctor| %>
+<div class="row border-bottom-eee">
+	<!-- Image Column -->
+	<div class="image-column col-4" style="margin-bottom:20px;">
+		<figure class="image">
+				<% if doctor.photo.attached? %>
+					<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:100px;" %>
+				<% else %>
+					<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:100px;" %>
+				<% end %>
+		</figure>
+	</div>
+
+	<!-- Content Column -->
+	<div class="content-column col-8">
+		<div class="inner-column">
+			<div class="sec-title">
+				<span class="text-green" style="font-size:18px;"><strong><%= doctor.profesional_name %></strong></span><br/>
+				<p><%= doctor.title %></p>
+				<%= raw doctor.operational_hours_label %><br/>
+				<a href="#" class="theme-btn btn-style-three smaller">Make Appointment</a>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>

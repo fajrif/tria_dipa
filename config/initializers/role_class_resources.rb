@@ -16,6 +16,8 @@ DEVELOPER_CLASS_RESOURCES = [
 	"institutions",
 	"specialists",
 	"doctors",
+	"schedules",
+	"appointments",
 	"questions",
 	"testimonials",
 	"snippets"

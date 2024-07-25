@@ -158,6 +158,33 @@ module AdminHelper
 		[[0, 'Global'], [1, 'Read-Only']]
 	end
 
+	def populate_array_of_time
+		["06:00",
+		"07:00",
+		"08:00",
+		"09:00",
+		"10:00",
+		"11:00",
+		"12:00",
+		"13:00",
+		"14:00",
+		"15:00",
+		"16:00",
+		"17:00",
+		"18:00",
+		"19:00",
+		"20:00",
+		"21:00",
+		"22:00",
+		"23:00",
+		"00:00",
+		"01:00",
+		"02:00",
+		"03:00",
+		"04:00",
+		"05:00"]
+	end
+
 	def has_asset?(path)
 		(Rails.application.assets || ::Sprockets::Railtie.build_environment(Rails.application)).find_asset(path) != nil
 	end
@@ -245,6 +272,10 @@ module AdminHelper
 	def is_admins_dashboard_page?
 		controller.controller_name == "dashboard"
 	end
+
+  def is_admins_appointments_page?
+		controller.controller_name == "appointments"
+  end
 
   def is_admins_articles_page?
 		controller.controller_name == "articles"

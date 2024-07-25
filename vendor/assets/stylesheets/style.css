@@ -20996,3 +20996,61 @@ Work Section
   min-width: auto;
   height: 60px;
 }
+/* calendar schedules */
+.calendar-specialists > .form-inner > ol.list-programs {
+	list-style-type: none;
+	counter-reset: li;
+	padding-inline-start: 0;
+	margin-bottom: 40px;
+}
+
+.calendar-specialists > .form-inner li {
+	font-size: 1.2rem;
+	padding: 20px 10px;
+	border-bottom: 2px solid #eee;
+}
+
+.border-bottom-eee {
+	border-bottom: 2px solid #eee;
+}
+
+.calendar-specialists > .form-inner > ol.list-programs:first-child {
+	padding-top: 0;
+}
+
+.calendar-specialists > .form-inner li > a {
+	color: #181818;
+}
+
+.calendar-specialists > .form-inner li.active,
+.calendar-specialists > .form-inner li:hover {
+	background-color: #FF8506;
+	border-radius: 8px;
+}
+.calendar-specialists > .form-inner li.active > a,
+.calendar-specialists > .form-inner li.active:after,
+.calendar-specialists > .form-inner li:hover:before,
+.calendar-specialists > .form-inner li:hover:after,
+.calendar-specialists > .form-inner li:hover > a {
+	color: #fff;
+}
+
+/*.calendar-specialists > .form-inner li:before {*/
+  /*counter-increment: li;*/
+  /*content: counter(li, decimal-leading-zero);*/
+	/*color: #fff;*/
+	/*margin-right: 30px;*/
+/*}*/
+
+.calendar-specialists > .form-inner li:after {
+	content:'\2197';
+	font-size: 40px;
+	text-align: right;
+	font-weight: 200;
+	float: right;
+	transform: rotate(45deg);
+	color: #181818;
+}
+.theme-btn.smaller {
+	padding: 5px 15px;
+}

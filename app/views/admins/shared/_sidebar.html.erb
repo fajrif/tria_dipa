@@ -28,6 +28,11 @@
 				</li>
 				<% if policy(:developer).index? %>
 				<li class="nav-item">
+					<a class="nav-link menu-link <%= 'active' if is_admins_appointments_page? %>" href="<%= admins_appointments_path %>">
+						<i class="ri-article-line"></i> <span data-key="t-calendar">Appointments</span>
+					</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link menu-link <%= 'active' if is_admins_articles_page? %>" href="<%= admins_articles_path %>">
 						<i class="ri-article-line"></i> <span data-key="t-dashboards">Articles</span>
 					</a>

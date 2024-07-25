@@ -69,10 +69,12 @@ Rails.application.routes.draw do
 				end
 			end
 			resources :doctors do
+				resources :schedules, :controller => "doctors/schedules", :except => [:index, :show]
 				member do
 					delete "delete_attachment_image/:asset_id" => "doctors#delete_attachment_image", :as => :delete_attachment_image
 				end
 			end
+			resources :appointments
 			resources :addresses do
 				collection do
 					patch :sort
@@ -85,6 +87,7 @@ Rails.application.routes.draw do
 		resource :contact, :only => [:show]
 		resources :articles, :only => [:index, :show]
 		resources :facilities, :only => [:index, :show]
+		resources :appointments, :only => [:create]
 		# resources :institutions, :only => [:index, :show]
 		resources :doctors, :only => [:index, :show]
 		resources :specialists, :only => [:index, :show]
@@ -92,6 +95,7 @@ Rails.application.routes.draw do
 		match 'terms', to: 'home#terms', via: :get, as: :terms
 		match 'privacy', to: 'home#privacy', via: :get, as: :privacy
 		match 'about', to: 'home#about', via: :get, as: :about
+		match '/search-schedules', to: 'home#search_schedules', via: :get, as: :search_schedules
 
 		# match "/search", :to => 'search#index', via: :post, as: :search
 		# route to pages

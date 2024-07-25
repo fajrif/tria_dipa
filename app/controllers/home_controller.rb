@@ -23,4 +23,27 @@ class HomeController < ApplicationController
 		@faqs = Question.all
   end
 
+	def search_schedules
+		dateStr = params[:date]
+		date = Date.parse(dateStr)
+		day_of_week = date.strftime("%w")
+
+		schedules = Schedule.where(day_code: day_of_week)
+		unless schedules.empty?
+			doctors = schedules.map(&:doctor)
+			doctors.uniq!
+			@specialist_schedules = doctors.map(&:specialists)
+			@specialist_schedules.flatten!
+			@specialist_schedules.uniq!
+
+			if specialist_current = @specialist_schedules.first
+				@doctor_schedules = doctors.select { |d|  d.specialists.include? specialist_current  }
+			end
+		end
+
+    respond_to do |format|
+      format.js
+    end
+	end
+
 end

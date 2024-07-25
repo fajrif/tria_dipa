@@ -1,0 +1,45 @@
+<%= simple_form_for @appointment, url: (@appointment.new_record? ? admins_appointments_path : admins_appointment_path(@appointment.id)), method: (@appointment.new_record? ? :post : :put) do |f| %>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body">
+					<%= f.error_notification %>
+					<fieldset>
+						<%= f.input :full_name, as: :string %>
+						<div class="row mb-3">
+							<%= f.input :email, wrapper: false, input_wrapper_html: { class: "col-md-6" } %>
+							<%= f.input :phone, wrapper: false, input_wrapper_html: { class: "col-md-6" } %>
+						</div>
+						<%= f.association :doctor, as: :select, value_method: :id, label_method: :profesional_name_with_title  %>
+						<%= f.input :message, as: :text %>
+					</fieldset>
+					<%= f.error :base %>
+					<div class="form-actions">
+						<%= f.button :submit, :class => 'btn btn-secondary' %>
+						<% unless @appointment.new_record? %>
+							<%= link_to "Cancel", admins_appointment_path(@appointment.id), :class => 'btn btn-light' %>
+						<% else %>
+							<%= link_to "Cancel", admins_appointments_path, :class => 'btn btn-light' %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<%= render "admins/shared/error_messages", :target => @appointment, col: 'col-lg-12' %>
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-title mb-0">Session</h5>
+						</div>
+						<div class="card-body">
+							<%= f.input :session_date, as: :string, input_html: { class: "datepicker", value: get_input_date_value(f.object.session_date) } %>
+							<%= f.input :session_time %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

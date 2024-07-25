@@ -1,0 +1,11 @@
+<% if @specialist_schedules %>
+<div class="calendar-specialists">
+	<div class="form-inner">
+		<ol class="list-programs">
+			<% @specialist_schedules.each_with_index do |ss, index| %>
+				<li class="<%= 'active' if index == 0 %>"><a href="#"><%= ss.name %></a></li>
+			<% end %>
+		</ol>
+	</div>
+</div>
+<% end %>

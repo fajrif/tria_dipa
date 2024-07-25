@@ -1,0 +1,63 @@
+<!-- About Section -->
+<section class="about-section style-two">
+	<div class="auto-container">
+		<div class="row justify-content-between align-items-end">
+			<div class="col-lg-10">
+				<h1 class="fw-700">
+					BOOK APPOINTMENT
+				</h1>
+			</div>
+		</div>
+		<div class="row pt-50">
+			<div class="calendar_wrapper col-lg-12">
+				<!-- Calendar will be here ... -->
+				<div id="calendar"></div>
+			</div>
+		</div>
+		<div class="row pt-50">
+			<div class="col-lg-4" id="specialistsTable">
+				<!-- Available doctors will be here ... -->
+			</div>
+			<div class="col-lg-6" style="margin-left:50px;" id="doctorsTable">
+				<!-- Available doctors will be here ... -->
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+
+<%= content_for :tail do %>
+	<%= stylesheet_link_tag "flatpickr.custom.css" %>
+	<%= javascript_include_tag "flatpickr.min.js" %>
+	<style>
+		.calendar_wrapper .form-control.input {
+			display: none;
+		}
+	</style>
+	<script>
+		jQuery(document).ready(function($){
+			// Flatpickr
+			$("#calendar").flatpickr({
+				"altInput":true,
+				inline: true,
+				"altFormat": "d/m/Y",
+				"enableTime": false,
+				"disableMobile":true,
+				"dateFormat":"d/m/Y",
+				minDate: "today",
+				onChange: function(selectedDates, dateStr, instance) {
+						console.log(dateStr);
+						$.ajax({
+								url: "<%= search_schedules_path %>",
+								type: "GET",
+								data: { date: dateStr },
+								dataType: 'script',
+								error: function() {
+										console.log('Unable to check schedule');
+								}
+						});
+				}
+			});
+		});
+	</script>
+<% end %>

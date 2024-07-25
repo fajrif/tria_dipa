@@ -11,9 +11,20 @@ class Doctor < ApplicationRecord
 
 	has_many :specialities
   has_many :specialists, :through => :specialities
+	has_many :appointments
+	has_many :schedules, dependent: :destroy
 
 	has_one_attached :photo, dependent: :purge
 	has_one :action_text_rich_text, class_name: 'ActionText::RichText', as: :record
+
+	def operational_hours_label
+		strLabel = ""
+		self.schedules.each do |s|
+			strLabel += "#{s.day_name}: #{s.start_time} - #{s.end_time}<br/>"
+		end
+
+		return strLabel
+	end
 
 	def should_generate_new_friendly_id?
 		self.full_name_changed?
@@ -21,6 +32,10 @@ class Doctor < ApplicationRecord
 
 	def find_other_doctors(_limit)
 		Doctor.where.not(id: self.id).limit(_limit)
+	end
+
+	def profesional_name_with_title
+		"#{self.profesional_name} (#{self.title})"
 	end
 
 end

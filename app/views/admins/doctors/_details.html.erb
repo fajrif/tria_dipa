@@ -53,6 +53,10 @@
 		<td><%= @doctor.specialists.map(&:name) %></td>
 	</tr>
 	<tr>
+		<td><b>Schedules</b></td>
+		<td><%= raw @doctor.operational_hours_label %></td>
+	</tr>
+	<tr>
 		<td><b>Content</b></td>
 		<td><%= raw @doctor.content %></td>
 	</tr>

@@ -33,11 +33,8 @@
 						<div class="text mr-20 mb-20" style="font-size:18px;">
 							<%= raw @doctor.content %>
 						</div>
-						<span class="text-green" style="font-size:18px;"><strong>SCHEDULES</strong></span>
-						<ul>
-							<li>Senin	: 17:30 - 20:00</li>
-							<li>Rabu	: 17:30 - 20:00</li>
-						</ul>
+						<span class="text-green" style="font-size:18px;"><strong>SCHEDULES</strong></span><br/>
+						<%= raw @doctor.operational_hours_label %><br/>
 						<span class="text-green" style="font-size:18px;"><strong>ALUMNI</strong></span>
 						<p><%= @doctor.alumni %></p>
 						<span class="text-green" style="font-size:18px;"><strong>STR NUMBER</strong></span>

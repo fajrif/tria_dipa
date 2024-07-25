@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_23_090334) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_25_023503) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -81,6 +81,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_23_090334) do
     t.datetime "updated_at", null: false
     t.integer "role_id", default: 0, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.string "full_name", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "phone", default: "", null: false
+    t.string "message", default: "", null: false
+    t.integer "doctor_id", default: 0, null: false
+    t.date "session_date", null: false
+    t.string "session_time", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "archive_types", force: :cascade do |t|
@@ -262,6 +274,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_23_090334) do
   create_table "roles", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "description", default: "", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer "doctor_id", default: 0, null: false
+    t.integer "day_code", default: 0, null: false
+    t.string "day_name", default: "", null: false
+    t.string "start_time", default: "06:00", null: false
+    t.string "end_time", default: "22:00", null: false
+    t.index ["doctor_id"], name: "index_schedules_on_doctor_id"
   end
 
   create_table "sections", force: :cascade do |t|
