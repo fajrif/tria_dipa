@@ -1,0 +1,17 @@
+<% if @message %>
+	<h3 style="color:#023401;">Booking Failed</h3>
+	<div class="order-confirmation">
+		<div class="upper-box">
+			<span class="icon fa fa-close failed"></span>
+			<p><%= @message %></p>
+		</div>
+	</div>
+<% else %>
+	<h3 style="color:#023401;">Booking Completed</h3>
+	<div class="order-confirmation">
+		<div class="upper-box">
+			<span class="icon fa fa-check"></span>
+			<h5>Thank You</h5>
+		</div>
+	</div>
+<% end %>

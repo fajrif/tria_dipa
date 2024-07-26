@@ -44,6 +44,15 @@
 		<%= yield %>
 		<%= render "shared/footer" %>
   </div>
+	<!-- END layout-wrapper -->
+	<div class="modal fade" id="myModal">
+		<div id="login-modal">
+			<div class="login-form default-form">
+				<div class="form-inner">
+				</div>
+			</div>
+		</div>
+	</div>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	<%= yield :tail %>
 </body>

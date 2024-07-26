@@ -1,0 +1,15 @@
+<h3 style="color:#023401;">Book Appointment</h3>
+<%= simple_form_for @appointment, url: appointments_path, method: :post, remote: true do |f| %>
+	<%= f.error_notification %>
+	<%= f.input :full_name, label: false, placeholder: "Full name" %>
+	<%= f.input :email, label: false, placeholder: "Email address" %>
+	<%= f.input :phone, label: false, placeholder: "Phone" %>
+	<%= f.input :message, as: :text, label: false, placeholder: "Write your message ..." %>
+	<p><%= raw "Confirm to book with <strong>#{@doctor.profesional_name}</strong> on <strong>#{@appointment.session_date.strftime('%A %d/%m/%Y')}</strong> at <strong>#{@appointment.session_time}</strong>, we will notify you if there's re-arrangement for the schedules." %></p>
+	<%= f.association :doctor, as: :hidden %>
+	<%= f.input :session_date, as: :hidden %>
+	<%= f.input :session_time, as: :hidden %>
+	<div class="form-group">
+		<%= f.button :submit, 'Submit', :class => 'theme-btn btn-style-one' %>
+	</div>
+<% end %>
