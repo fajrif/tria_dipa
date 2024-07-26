@@ -1,2 +1,17 @@
 $("#specialistsTable").html("<%= escape_javascript(render("specialist_schedules")) %>");
 $("#doctorsTable").html("<%= escape_javascript(render("doctor_schedules")) %>");
+
+$(".link_search_doctors").click(function(e){
+	e.preventDefault();
+	var dateStr = $("#calendar").val();
+	var specialistId = $(this).attr("data-id");
+	$.ajax({
+			url: "<%= search_schedules_path %>",
+			type: "GET",
+			data: { date: dateStr, specialist_id: specialistId },
+			dataType: 'script',
+			error: function() {
+					console.log('Unable to check schedule');
+			}
+	});
+});

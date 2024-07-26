@@ -4,9 +4,9 @@
 	<div class="image-column col-4" style="margin-bottom:20px;">
 		<figure class="image">
 				<% if doctor.photo.attached? %>
-					<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:100px;" %>
+					<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:150px;" %>
 				<% else %>
-					<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:100px;" %>
+					<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:150px;" %>
 				<% end %>
 		</figure>
 	</div>
@@ -23,4 +23,4 @@
 		</div>
 	</div>
 </div>
-<% end %>
+<% end if @doctor_schedules %>

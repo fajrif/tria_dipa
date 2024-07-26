@@ -36,8 +36,15 @@ class HomeController < ApplicationController
 			@specialist_schedules.flatten!
 			@specialist_schedules.uniq!
 
-			if specialist_current = @specialist_schedules.first
-				@doctor_schedules = doctors.select { |d|  d.specialists.include? specialist_current  }
+			if params[:specialist_id].blank?
+				if @specialist_current = @specialist_schedules.first
+					@doctor_schedules = doctors.select { |d| d.specialists.include? @specialist_current }
+				end
+			else
+				specialist_id = params[:specialist_id]
+				if @specialist_current = @specialist_schedules.select { |s| s.id == specialist_id.to_i }.first
+					@doctor_schedules = doctors.select { |d| d.specialists.include? @specialist_current }
+				end
 			end
 		end
 

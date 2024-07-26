@@ -11,14 +11,14 @@
 		<div class="row pt-50">
 			<div class="calendar_wrapper col-lg-12">
 				<!-- Calendar will be here ... -->
-				<div id="calendar"></div>
+				<input id="calendar" />
 			</div>
 		</div>
-		<div class="row pt-50">
+		<div class="row pt-50 d-flex justify-content-between">
 			<div class="col-lg-4" id="specialistsTable">
 				<!-- Available doctors will be here ... -->
 			</div>
-			<div class="col-lg-6" style="margin-left:50px;" id="doctorsTable">
+			<div class="col-lg-6" id="doctorsTable">
 				<!-- Available doctors will be here ... -->
 			</div>
 		</div>
@@ -46,7 +46,6 @@
 				"dateFormat":"d/m/Y",
 				minDate: "today",
 				onChange: function(selectedDates, dateStr, instance) {
-						console.log(dateStr);
 						$.ajax({
 								url: "<%= search_schedules_path %>",
 								type: "GET",
