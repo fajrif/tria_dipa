@@ -87,7 +87,7 @@ Rails.application.routes.draw do
 		resource :contact, :only => [:show]
 		resources :articles, :only => [:index, :show]
 		resources :facilities, :only => [:index, :show]
-		resources :appointments, :only => [:create]
+		resources :appointments, :only => [:new, :create]
 		# resources :institutions, :only => [:index, :show]
 		resources :doctors, :only => [:index, :show]
 		resources :specialists, :only => [:index, :show]

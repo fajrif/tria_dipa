@@ -15,3 +15,18 @@ $(".link_search_doctors").click(function(e){
 			}
 	});
 });
+
+$(".link_book_doctors").click(function(e){
+	e.preventDefault();
+	var dateStr = $("#calendar").val();
+	var doctorId = $(this).attr("data-id");
+	$.ajax({
+			url: "<%= new_appointment_path %>",
+			type: "GET",
+			data: { date: dateStr, doctor_id: doctorId },
+			dataType: 'script',
+			error: function() {
+					console.log('Unable to book appointment');
+			}
+	});
+});

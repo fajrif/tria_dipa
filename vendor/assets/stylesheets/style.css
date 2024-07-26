@@ -8194,12 +8194,12 @@ Login Section
 }
 
 .login-form .text {
-  position: relative;
-  font-size: 14px;
-  line-height: 19px;
-	color: #fff;
-  text-align: center;
-  margin-top: 5px;
+  /*position: relative;*/
+  /*font-size: 14px;*/
+  /*line-height: 19px;*/
+	/*color: #fff;*/
+  /*text-align: center;*/
+  /*margin-top: 5px;*/
 }
 
 .login-form .text a {
@@ -15535,13 +15535,17 @@ Order Slip
   display: inline-block;
   height: 80px;
   width: 80px;
-  color: #1967d2;
-  background: rgba(25, 103, 210, 0.1);
+  color: #fff;
+	background: rgba(144, 238, 144, 0.5);
   border-radius: 50%;
   line-height: 80px;
   text-align: center;
   font-size: 24px;
   margin-bottom: 13px;
+}
+.order-confirmation .upper-box .icon.failed {
+  color: red;
+	background: rgba(255, 133, 5, 0.2);
 }
 
 .order-confirmation .upper-box h4 {

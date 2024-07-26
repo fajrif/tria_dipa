@@ -12,4 +12,8 @@ class Schedule < ApplicationRecord
 		self.day_name = Date::DAYNAMES[self.day_code]
 	end
 
+	def get_session_time
+		"#{self.start_time} - #{self.end_time}"
+	end
+
 end
