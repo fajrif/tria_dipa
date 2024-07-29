@@ -428,13 +428,13 @@
 					items:1
 				},
 				768:{
-					items:2
+					items:1
 				},
 				1024:{
-					items:3
+					items:1
 				}
 			}
-		});    		
+		});
 	}
 
 	if ($('.job-carousel-type-14').length) {

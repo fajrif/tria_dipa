@@ -17121,6 +17121,10 @@ Product Tabs
      object-fit: cover;
 }
 
+.testimonial.-type-2 .image-comment img {
+	width: auto;
+}
+
 .testimonial.-type-2 .content {
   margin-top: 30px;
 }
@@ -17133,15 +17137,15 @@ Product Tabs
 }
 
 .testimonial.-type-2 .content p {
-  margin-top: 21px;
-  font-size: 14px;
+  margin: 20px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 26px;
-  color: #404046;
+  color: #023401;
 }
 
 .testimonial.-type-2 .author {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .testimonial.-type-2 .author .name {

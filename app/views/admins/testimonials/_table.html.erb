@@ -13,7 +13,13 @@
 			<% for testimonial in @testimonials %>
 				<tr>
 					<td class="text-center"><%= testimonial.id %></td>
-					<td><%= image_tag testimonial.photo.variant(resize_to_limit: [100,100]) if testimonial.photo.attached? %></td>
+					<td>
+						<% if testimonial.photo.attached? %>
+							<%= image_tag testimonial.photo.variant(resize_to_limit: [80,80]) %>
+						<% else %>
+							<%= image_tag('default-testimonial.png') %>
+						<% end %>
+					</td>
 					<td>
 						<h5 class="fs-14 mb-1"><%= link_to testimonial.full_name, admins_testimonial_path(testimonial), class: "text-body" %></h5>
 					</td>
