@@ -1,0 +1,47 @@
+<%- @testimonials = Testimonial.all -%>
+<% unless @testimonials.empty? %>
+<!-- Testimonials Section -->
+<section class="layout-pt-60 layout-pb-120">
+	<div class="auto-container">
+		<div class="row justify-content-center text-center">
+			<div class="col-auto">
+				<div class="">
+					<h1 class="fw-700 text-green">PATIENT EXPERIENCE</h1>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="job-carousel pt-50 wow fadeInUp owl-carousel owl-theme default-dots">
+
+			<% @testimonials.each do |testimonial| %>
+			<!-- Job Block -->
+			<div class="">
+				<div class="testimonial -type-2 text-center">
+					<div class="image-comment">
+						<%= image_tag('comment.png', class: "mx-auto") %>
+					</div>
+
+					<div class="content">
+						<p><%= testimonial.comment %></p>
+					</div>
+
+					<div class="image">
+						<% if testimonial.photo.attached? %>
+							<img class="mx-auto" src="<%= url_for(testimonial.photo.variant(resize_to_limit: [80,80])) %>" alt="<%= testimonial.full_name %>">
+						<% else %>
+							<%= image_tag('default-testimonial.png', class: "mx-auto") %>
+						<% end %>
+					</div>
+					<div class="author">
+						<div class="name"><%= testimonial.full_name %></div>
+					</div>
+				</div>
+			</div>
+			<% end %>
+
+		</div>
+	</div>
+</section>
+<!-- End Testimonials Section -->
+<% end %>

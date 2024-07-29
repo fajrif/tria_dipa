@@ -4,6 +4,6 @@ class Testimonial < ApplicationRecord
 
   # Validations
   validates_presence_of :full_name, :comment
-	validates :photo, attached: true
+	# validates :photo, attached: true
 
 end
