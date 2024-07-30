@@ -9,17 +9,14 @@
 			</div>
 		</div>
 		<div class="row pt-50">
-			<div class="calendar_wrapper col-lg-12">
+			<div class="col-lg-4 col-12">
+				<div class="category-block-two calendar-left">
+					<%= render "calendar_left" %>
+				</div>
+			</div>
+			<div class="calendar_wrapper col-lg-8 col-12">
 				<!-- Calendar will be here ... -->
 				<input id="calendar" />
-			</div>
-		</div>
-		<div class="row pt-50 d-flex justify-content-between">
-			<div class="col-lg-4" id="specialistsTable">
-				<!-- Available doctors will be here ... -->
-			</div>
-			<div class="col-lg-6" id="doctorsTable">
-				<!-- Available doctors will be here ... -->
 			</div>
 		</div>
 	</div>
@@ -44,10 +41,9 @@
 				"enableTime": false,
 				"disableMobile":true,
 				"dateFormat":"d/m/Y",
-				minDate: "today",
 				onChange: function(selectedDates, dateStr, instance) {
 						$.ajax({
-								url: "<%= search_schedules_path %>",
+								url: "<%= search_events_path %>",
 								type: "GET",
 								data: { date: dateStr },
 								dataType: 'script',

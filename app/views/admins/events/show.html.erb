@@ -1,0 +1,40 @@
+<% title_page("Event Details") %>
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="card card-box">
+			<div class="card-body">
+				<table class="table table-hover">
+					<tr>
+						<td style="width:15%;"><b>ID</b></td>
+						<td><%= @event.id %></td>
+					</tr>
+					<tr>
+						<td><b>Title</b></td>
+						<td><h5 class="fs-14 mb-0 text-body"><%= @event.title %></h5></td>
+					</tr>
+					<tr>
+						<td><b>Description</b></td>
+						<td><%= @event.description %></td>
+					</tr>
+					<tr>
+						<td><b>Date</b></td>
+						<td><%= @event.date.strftime('%d/%m/%Y') %></td>
+					</tr>
+					<tr>
+						<td><b>Created At</b></td>
+						<td><%= @event.created_at.strftime('%d/%m/%Y %H:%M') %></td>
+					</tr>
+					<tr>
+						<td><b>Updated At</b></td>
+						<td><%= @event.updated_at.strftime('%d/%m/%Y %H:%M') %></td>
+					</tr>
+				</table>
+				<div class="form-actions">
+					<%= link_to 'Edit', edit_admins_event_path(@event.id), :class => 'btn btn-secondary' %>
+					<%= link_to 'Destroy', admins_event_path(@event.id), :confirm => 'Are you sure?', :method => :delete, :class => 'btn btn-danger' %>
+					<%= link_to 'View All', admins_events_path, :class => 'btn btn-light' %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

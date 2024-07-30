@@ -1,0 +1,41 @@
+<!--Tabs Box-->
+<div class="tab-buttons-wrap">
+	<ul class="tab-buttons -pills-condensed -blue">
+		<% @specialists.each do |specialist| %>
+			<li class="tab-btn <%= 'active-btn' if specialist.id == @specialist.id %>"><%= link_to specialist.name.downcase.titleize, search_doctors_path(specialist.id), remote: true %></li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="tabs-content pt-20">
+	<!--Tab-->
+	<div class="tab">
+		<div class="row">
+			<% if @doctors.empty? %>
+				<p>No specialist found for: <%= @specialist.name.downcase.titleize %></p>
+			<% else %>
+				<% @doctors.each do |doctor| %>
+					<div class="candidate-block-two col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-box">
+							<div class="content-box">
+								<figure class="image">
+									<% if doctor.photo.attached? %>
+										<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:150px;" %>
+									<% else %>
+										<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:150px;" %>
+									<% end %>
+								</figure>
+								<h4 class="name"><%= doctor.profesional_name %></h4>
+								<span class="designation"><%= doctor.title %></span>
+								<div style="font-size:14px;margin-bottom:20px;">
+									<%= raw doctor.operational_hours_label %>
+								</div>
+								<a href="#" class=" theme-btn btn-style-three smaller" style="font-size:12px;">Make Appointment</a>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

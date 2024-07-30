@@ -8,7 +8,7 @@
   -webkit-animation: none;
           animation: none;
   direction: ltr;
-  border: 1px solid #eee;
+  /*border: 1px solid #eee;*/
   font-size: 14px;
   line-height: 24px;
   border-radius: 5px;
@@ -210,6 +210,7 @@
   /*
         */
   left: 0;
+	margin-left: 40px;
   /*
         /*rtl:end:ignore*/
   /*
@@ -222,6 +223,7 @@
   /*
         */
   right: 0;
+	margin-right: 40px;
   /*
         /*rtl:end:ignore*/
   /*
@@ -233,7 +235,7 @@
 }
 .flatpickr-months .flatpickr-prev-month:hover svg,
 .flatpickr-months .flatpickr-next-month:hover svg {
-  fill: rgba(255, 255, 255, 0.9);
+  /*fill: rgba(255, 255, 255, 0.9);*/
 }
 .flatpickr-months .flatpickr-prev-month svg,
 .flatpickr-months .flatpickr-next-month svg {
@@ -407,6 +409,7 @@
   height: auto;
   line-height: inherit;
   margin: -1px 0 0 0;
+	margin-right: 10px;
   outline: none;
   padding: 0 0 0 0.5ch;
   position: relative;
@@ -427,7 +430,7 @@
 }
 
 .flatpickr-weekdays {
-  background-color: #023501;
+  /*background-color: #023501;*/
   text-align: center;
   overflow: hidden;
   width: 100%;
@@ -451,9 +454,9 @@
 
 span.flatpickr-weekday {
   cursor: default;
-  font-size: 90%;
-  background: #023501;
-  color: #fff;
+  /*font-size: 90%;*/
+  /*background: #023501;*/
+  color: #023501;
   line-height: 1;
   margin: 0;
   text-align: center;
@@ -510,9 +513,12 @@ span.flatpickr-weekday {
           box-shadow: -1px 0 0 #e6e6e6;
 }
 
+.flatpickr-day:hover {
+  border: .5px solid #eee;
+}
 .flatpickr-day {
   background: none;
-  border: .5px solid #eee;
+  /*border: .5px solid #eee;*/
   border-radius: 150px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -779,4 +785,38 @@ span.flatpickr-weekday {
 [datepicker-inline],
 [timepicker-inline] {
   display: none;
+}
+
+/* New Calendar */
+.calendar-left {
+	width: 100%;
+	height: 310px;
+	border-radius: 10px 0px 0px 10px;
+	background-color: #ff8505;
+	color: white;
+	margin-bottom: 0;
+}
+.category-block-two.calendar-left .content {
+	height: 100%;
+}
+
+.num-date {
+	font-size: 100px !important;
+	line-height: .8em;
+	margin: 20px auto;
+	font-weight: 700;
+	color: #fff !important;
+}
+.day-date {
+	text-transform: uppercase;
+}
+
+.current-events {
+	margin-top: 10px;
+}
+.current-events li {
+	list-style: disc;
+	width: 50%;
+	margin: 0 auto;
+	line-height: 1.2em;
 }

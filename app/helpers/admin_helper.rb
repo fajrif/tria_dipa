@@ -300,6 +300,7 @@ module AdminHelper
 		controller.controller_name == "facilities" ||
 		controller.controller_name == "questions" ||
 		controller.controller_name == "testimonials" ||
+		controller.controller_name == "events" ||
 		controller.controller_name == "institutions"
 	end
 

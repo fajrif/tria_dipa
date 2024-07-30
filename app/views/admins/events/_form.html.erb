@@ -1,0 +1,30 @@
+<%= simple_form_for @event, url: (@event.new_record? ? admins_events_path : admins_event_path(@event.id)), method: (@event.new_record? ? :post : :put) do |f| %>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body">
+					<%= f.error_notification %>
+					<fieldset>
+						<%= f.input :date, as: :string, input_html: { class: "datepicker", value: get_input_date_value(f.object.date) } %>
+						<%= f.input :title, as: :string %>
+						<%= f.input :description, as: :text %>
+					</fieldset>
+					<%= f.error :base %>
+					<div class="form-actions">
+						<%= f.button :submit, :class => 'btn btn-secondary' %>
+						<% unless @event.new_record? %>
+							<%= link_to "Cancel", admins_event_path(@event.id), :class => 'btn btn-light' %>
+						<% else %>
+							<%= link_to "Cancel", admins_events_path, :class => 'btn btn-light' %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<%= render "admins/shared/error_messages", :target => @event, col: 'col-lg-12' %>
+			</div>
+		</div>
+	</div>
+<% end %>

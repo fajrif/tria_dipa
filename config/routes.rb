@@ -75,6 +75,7 @@ Rails.application.routes.draw do
 				end
 			end
 			resources :appointments
+			resources :events
 			resources :addresses do
 				collection do
 					patch :sort
@@ -95,7 +96,9 @@ Rails.application.routes.draw do
 		match 'terms', to: 'home#terms', via: :get, as: :terms
 		match 'privacy', to: 'home#privacy', via: :get, as: :privacy
 		match 'about', to: 'home#about', via: :get, as: :about
-		match '/search-schedules', to: 'home#search_schedules', via: :get, as: :search_schedules
+		# match '/search-schedules', to: 'home#search_schedules', via: :get, as: :search_schedules
+		match '/search-events', to: 'home#search_events', via: :get, as: :search_events
+		match '/search-doctors/:specialist_id', to: 'home#search_doctors', via: :get, as: :search_doctors
 
 		# match "/search", :to => 'search#index', via: :post, as: :search
 		# route to pages

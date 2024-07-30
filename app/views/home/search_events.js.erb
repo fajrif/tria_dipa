@@ -1,0 +1,21 @@
+$(".calendar-left").html("<%= escape_javascript(render("calendar_left")) %>");
+
+$("#calendar").flatpickr({
+	"altInput":true,
+	"inline": true,
+	"altFormat": "d/m/Y",
+	"enableTime": false,
+	"disableMobile": true,
+	"dateFormat": "d/m/Y",
+	onChange: function(selectedDates, dateStr, instance) {
+			$.ajax({
+					url: "<%= search_events_path %>",
+					type: "GET",
+					data: { date: dateStr },
+					dataType: 'script',
+					error: function() {
+							console.log('Unable to check schedule');
+					}
+			});
+	}
+});

@@ -883,7 +883,6 @@
 					}
 				});
 			}
-			
 		},{accY: 0});
 	}
 
@@ -901,7 +900,6 @@
 		$('.tabs-box .tab-buttons .tab-btn').on('click', function(e) {
 			e.preventDefault();
 			var target = $($(this).attr('data-tab'));
-			
 			if ($(target).is(':visible')){
 				return false;
 			}else{
@@ -926,7 +924,6 @@
 			$( "input.property-amount" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
 			}
 		});
-		
 		$( "input.property-amount" ).val( $( ".price-range-slider" ).slider( "values", 0 ) + " - $" + $( ".price-range-slider" ).slider( "values", 1 ) );	
 	}
 
