@@ -4,6 +4,11 @@ class HomeController < ApplicationController
 		# get public home
 		@articles = Article.first(4)
 		@facilities = Facility.all
+		@events = Event.where(date: Date.today)
+		@specialists = Specialist.all
+		if @specialist = @specialists.first
+			@doctors = @specialist.doctors
+		end
   end
 
   def about
@@ -47,6 +52,29 @@ class HomeController < ApplicationController
 				end
 			end
 		end
+
+    respond_to do |format|
+      format.js
+    end
+	end
+
+	def search_events
+		dateStr = params[:date]
+		date = Date.parse(dateStr)
+		@date_day = date.strftime("%d")
+		@date_wday = date.strftime("%A")
+
+		@events = Event.where(date: date)
+
+    respond_to do |format|
+      format.js
+    end
+	end
+
+	def search_doctors
+		@specialists = Specialist.all
+		@specialist = Specialist.find_by_id(params[:specialist_id])
+		@doctors = @specialist.doctors
 
     respond_to do |format|
       format.js
