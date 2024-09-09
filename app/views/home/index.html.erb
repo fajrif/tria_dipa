@@ -8,3 +8,8 @@
 <%= render "programs" %>
 <%= render "articles" %>
 <%= render "contacts/location" %>
+
+<%= content_for :tail do %>
+	<link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+	<script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+<% end %>

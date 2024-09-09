@@ -91,3 +91,72 @@
 .order-confirmation {
 	padding: 0;
 }
+
+/* ===================================
+    09. Video
+====================================== */
+/*.video-wrapper {*/
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.htms-video {*/
+		/*background-color: #000;*/
+		/*height: auto;*/
+		/*left: 50%;*/
+		/*min-height: 100%;*/
+		/*min-width: 100%;*/
+		/*position: absolute;*/
+		/*top: 50%;*/
+		/*-ms-transform: translate(-50%, -50%);*/
+		/*-webkit-transform: translate(-50%, -50%);*/
+		/*transform: translate(-50%, -50%);*/
+		/*-moz-transform: translate(-50%, -50%);*/
+		/*-o-transform: translate(-50%, -50%);*/
+		/*width: auto;*/
+		/*z-index: -3;*/
+/*}*/
+
+.htms-video {
+	background-color: #000;
+	height: auto;
+	min-height: 100%;
+	min-width: 100%;
+	/*position: absolute;*/
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*-ms-transform: translate(-50%, -50%);*/
+	/*-webkit-transform: translate(-50%, -50%);*/
+	/*transform: translate(-50%, -50%);*/
+	/*-moz-transform: translate(-50%, -50%);*/
+	/*-o-transform: translate(-50%, -50%);*/
+	width: 100%;
+	z-index: -3;
+}
+
+/*.video-wrapper iframe {*/
+    /*height: 100%;*/
+    /*left: 0;*/
+    /*position: absolute;*/
+    /*top: -5px !important;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.video-background {*/
+    /*position: absolute;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
+    /*z-index: 1;*/
+    /*top: 0;*/
+    /*background: rgba(67,67,67,0.5)*/
+/*}*/
+/*video::-webkit-media-controls {*/
+    /*display:none !important;*/
+/*}*/
+/*video {*/
+    /*clip-path: inset(1px 1px);*/
+		/*outline: none;*/
+/*}*/
+/*video:focus { outline:none; }*/
