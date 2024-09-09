@@ -17142,7 +17142,7 @@ Product Tabs
 }
 
 .testimonial.-type-2 .content p {
-  margin: 20px;
+  margin: 20px 200px;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
@@ -18509,7 +18509,7 @@ Product Tabs
 }
 
 .tab-buttons.-pills-condensed .tab-btn + .tab-btn {
-  margin-left: 6px;
+  margin-left: 30px;
 }
 
 @media (max-width: 767px) {
