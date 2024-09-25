@@ -194,7 +194,7 @@
 			nav:false,
 			dots:true,
 			smartSpeed: 500,
-			autoplay: true,
+			autoplay: false,
 			autoplayTimeout:5000,
 			touchDrag:false,
 			mouseDrag:false,
