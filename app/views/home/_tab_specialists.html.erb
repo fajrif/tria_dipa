@@ -25,7 +25,7 @@
 										<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:150px;" %>
 									<% end %>
 								</figure>
-								<h4 class="name"><%= doctor.profesional_name %></h4>
+								<a href="<%= doctor_path(doctor) %>"><h4 class="name"><%= doctor.profesional_name %></h4></a>
 								<span class="designation"><%= doctor.title %></span>
 								<div style="font-size:14px;margin-bottom:20px;">
 									<%= raw doctor.operational_hours_label %>
