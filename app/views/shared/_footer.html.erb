@@ -5,83 +5,101 @@
 
 <%= render "shared/contact" %>
 <!-- Main Footer -->
-<footer class="main-footer style-three">
+<footer class="main-footer style-five">
 	<!--Widgets Section-->
 	<div class="widgets-section">
 		<div class="auto-container">
+
 			<div class="row">
-				<div class="big-column col-md-12">
-					<div class="sec-title text-center">
-						<%= link_to root_path do %>
-							<%= image_tag('logo.png', id: 'logo-footer', style: "width:30%;") %>
-						<% end %>
-					</div>
-				</div>
-				<div class="big-column col-md-12">
+				<div class="big-column col-xl-9 col-lg-9 col-md-12 mb-20">
 					<div class="row">
-						<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+						<div class="footer-column col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-widget links-widget">
-								<span class="widget-title"><a href="<%= about_path %>">About Us</a></span>
+								<h4 class="widget-title">DISCOVER</h4>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="<%= about_path %>">About Us</a></li>
+										<li><a href="<%= specialists_path %>">Specialists</a></li>
+										<li><a href="<%= facilities_path %>">Facilities</a></li>
+										<li><a href="<%= contact_path %>">Contact Us</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+
+						<div class="footer-column col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-widget links-widget">
-								<span class="widget-title"><a href="<%= specialists_path %>">Specialists</a></span>
+								<h4 class="widget-title">BUSINESS HOURS</h4>
+								<div class="widget-content">
+									<ul class="list">
+										<li>
+											<span>On Weekdays</span>
+											<strong>9:00am to 5:00pm</strong>
+										</li>
+										<li>
+											<span>On Saturdays</span>
+											<strong>9:00am to 1:00pm</strong>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+
+						<div class="footer-column col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-widget links-widget">
-								<span class="widget-title"><a href="<%= facilities_path %>">Facilities</a></span>
+								<h4 class="widget-title">CONTACT US</h4>
+								<div class="widget-content">
+									<ul class="list">
+										<li class="text">
+											<span>Customer Care</span>
+											<strong><a href="tel:+62217974071">(021) 7974071</a></strong>
+										</li>
+										<li class="text">
+											<span>Emergency Call</span>
+											<strong><a href="tel:+62217974070">(021) 7974070</a></strong>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="footer-column col-lg-3 col-md-6 col-sm-12">
+
+						<div class="footer-column col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-widget links-widget">
-								<span class="widget-title"><a href="<%= contact_path %>">Contact Us</a></span>
+								<h4 class="widget-title">COMMUNITY</h4>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="<%= configatron.social_instagram_url %>" target="_blank">Instagram</a></li>
+										<li><a href="<%= configatron.social_tiktok_url %>" target="_blank">Tiktok</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="big-column col-md-12 flex-center mt-50">
-					<div class="content">
-						<div class="img-icon">
-							<%= image_tag('office_hours.png') %>
-						</div>
-						<p>
-							9:00am to 5:00pm on Weekdays<br/>
-							9:00am to 1:00pm on Saturdays
-						</p>
-					</div>
-				</div>
-				<div class="big-column col-md-12 flex-center">
-					<div class="content">
-						<div class="img-icon">
-							<%= image_tag('wa_img.png') %>
-						</div>
-						<h4 class="phone-title text-underline"><%= get_address.phone1 %> (Customer Call)</h4>
-						<h4 class="phone-title text-underline"><%= get_address.phone2 %> (Emergency Call)</h4>
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 
-	<!--Bottom-->
-	<div class="footer-bottom">
-		<div class="auto-container">
-			<div class="outer-box">
-				<div class="copyright-text">© 2023 <a href="#">Tria Dipa Hospital</a></div>
-				<div class="social-links">
-					<a href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fab fa-square-instagram"></i></a>
-					<a href="<%= configatron.social_tiktok_url %>" target="_blank"><i class="fab fa-tiktok"></i></a>
+			<div class="row">
+				<div class="footer-column col-lg-4 col-md-4 col-sm-12">
+					<div class="logo text-center text-md-start">
+						<%= link_to root_path do %>
+							<%= image_tag('logo.png') %>
+						<% end %>
+					</div>
 				</div>
-				<div class="terms-link">
-					<ul class="list">
-						<li><a href="<%= terms_path %>">Terms &amp; Conditions</a></li>
-						<li><a href="<%= privacy_path %>">Privacy Policy</a></li>
-					</ul>
+				<div class="footer-column col-lg-8 col-md-8 col-sm-12">
+					<div class="footer-widget links-widget">
+						<div class="widget-content text-center text-md-end">
+							<ul class="list">
+								<li><a href="<%= privacy_path %>">Privacy Policy</a></li>
+								<li><a href="<%= terms_path %>">Terms &amp; Conditions</a></li>
+								<li>© 2024 By Gies Health</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
 <!-- End Main Footer -->
+
