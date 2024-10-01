@@ -4714,11 +4714,11 @@ Main Footer
 
 .main-footer .widget-title {
   position: relative;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
-  color: #fff;
+  color: #023401;
   line-height: 1.4em;
-  /*margin-bottom: 30px;*/
+  margin-bottom: 10px;
 }
 .main-footer .phone-title {
 	position: relative;
@@ -4800,7 +4800,7 @@ Main Footer
 /*=== Cities Widget ===*/
 .main-footer .links-widget {
   position: relative;
-	text-align: center;
+	text-align: start;
 }
 
 .main-footer .list {
@@ -4817,10 +4817,21 @@ Main Footer
   margin-bottom: 15px;
 }
 
+.main-footer .list li {
+  color: #023401;
+	font-size: 16px;
+	line-height: 1em;
+  transition: all 200ms ease;
+}
+
+.main-footer .list li span {
+  display: block;
+	margin-bottom: 10px;
+}
+
 .main-footer .list li a {
   display: inline-block;
-  color: #181818;
-  transition: all 200ms ease;
+  color: #023401;
 }
 
 
