@@ -36,15 +36,15 @@
 				<% end %>
 			</div>
 		<% else %>
-			<% @specialists.each_slice(5) do |specialists| %>
+			<% @specialists.each_slice(4) do |specialists| %>
 				<div class="row justify-content-center align-items-center grid-base wow fadeInUp">
 					<% specialists.each do |specialist| %>
 						<!-- Category Block -->
-						<div class="category-block-three col-lg col-md-6 col-sm-6">
+						<div class="category-block-three col-lg-3 col-md-6 col-sm-6">
 							<div class="inner-box">
 								<div class="content">
 									<a href="<%= specialist_path(specialist) %>">
-										<%= image_tag specialist.image.variant(resize: "200x200").processed if specialist.image.attached? %>
+										<%= image_tag specialist.image.variant(resize: "200x200").processed, style: "width:40%;" if specialist.image.attached? %>
 									</a>
 									<h4><%= link_to specialist.name, specialist_path(specialist) %></h4>
 									<p><%= specialist.headline.truncate(100) %></p>

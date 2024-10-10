@@ -1,42 +1,51 @@
-<section class="layout-pt-60 layout-pb-100">
-	<div class="auto-container">
-		<div class="row justify-content-center align-items-center text-center">
-			<div class="section-title-page col-lg-12">
-				<h2 class="fw-700">DOCTOR INFO</h2>
-				<div class="text">Lorem ipsum dolor sit amet elit, sed do eiusmod tempor</div>
-			</div>
-		</div>
-	</div>
-</section>
-
 <!-- About Section -->
-<section class="about-section style-two layout-pt-0">
-	<div class="auto-container">
+<section class="about-section style-two layout-pt-60">
+	<div class="auto-container border-bottom-green">
 		<div class="row">
-			<!-- Image Column -->
-			<div class="image-column col-lg-6 col-md-12 col-sm-12">
-				<figure class="image wow fadeInLeft">
-					<% if @doctor.photo.attached? %>
-						<%= image_tag url_for(@doctor.photo) %>
-					<% else %>
-						<%= image_tag "doctor-avatar.png", class: "border-radius-8" %>
-					<% end %>
-				</figure>
-			</div>
-
-			<!-- Content Column -->
-			<div class="content-column col-lg-6 col-md-12 col-sm-12">
-				<div class="inner-column wow fadeInUp">
-					<div class="sec-title">
-						<h2 style="margin-bottom:20px;"><%= @doctor.profesional_name %></h2>
-						<span style="font-size:18px;"><strong><%= @doctor.title %></strong></span>
-						<span class="text-green" style="font-size:18px;"><strong>SCHEDULES</strong></span><br/>
-						<%= raw @doctor.operational_hours_label %><br/>
-						<span class="text-green" style="font-size:18px;"><strong>ALUMNI</strong></span>
-						<p><%= @doctor.alumni %></p>
-						<span class="text-green" style="font-size:18px;"><strong>STR NUMBER</strong></span>
-						<p><%= @doctor.str_no %></p>
+			<div class="col-lg-8 col-md-8 col-12">
+				<div class="row">
+					<!-- Image Column -->
+					<div class="image-column col-lg-4 col-md-12 col-sm-12">
+						<figure class="image wow fadeInLeft">
+							<% if @doctor.photo.attached? %>
+								<%= image_tag url_for(@doctor.photo), class: "border-radius-8" %>
+							<% else %>
+								<%= image_tag "doctor-avatar.png", class: "border-radius-8" %>
+							<% end %>
+						</figure>
 					</div>
+
+					<!-- Content Column -->
+					<div class="content-column col-lg-8 col-md-12 col-sm-12">
+						<div class="inner-column wow fadeInUp">
+							<div class="sec-title mt-0">
+								<h2 style="margin-bottom:10px;"><%= @doctor.profesional_name %></h2>
+								<div style="font-size:18px;margin-bottom:50px;font-weight:900;"><%= @doctor.title %></div>
+
+								<ul class="accordion-box">
+									<!--Block-->
+									<li class="accordion block active-block">
+										<div class="acc-btn active">Doctor Schedule <span class="icon flaticon-add"></span></div>
+										<div class="acc-content current">
+											<div class="content">
+												<%= raw @doctor.operational_hours_label %>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-12">
+				<div class="orange-card">
+					<h4 class="mb-20">Schedule & Book Appointment</h4>
+					<p class="text-white mb-20">
+						Make an appointment with us today and be seen by one of our many healthcare professionals as soon as possible.
+					</p>
+					<a href="#" class="theme-btn btn-style-five medium">Make Appointment</a>
 				</div>
 			</div>
 		</div>
