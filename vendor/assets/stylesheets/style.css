@@ -1984,14 +1984,14 @@ Buttons Styles
 	text-transform: uppercase;
 	line-height: 20px;
 	border-radius: 25px;
-	border: 2px solid #023401;
+	border: 1.5px solid #023401;
 	font-weight: 500;
 	padding: 10px 25px;
 }
 
 .btn-style-three:hover {
   color: #FFFFFF !important;
-  border-color: #FFFFFF !important;
+  border-color: #FF8506 !important;
   background-color: #FF8506;
 }
 
@@ -2129,7 +2129,7 @@ Buttons Styles
 
 .theme-btn.small {
   padding: 5px 18px;
-  font-size: 12px;
+  font-size: 10px;
   min-width: 80px;
   font-weight: 800;
   line-height: 21px;
@@ -4797,6 +4797,12 @@ Main Footer
 	align-items: center;
 }
 
+.footer-bottom .copyright-text > ul.copyright-link > li {
+	display: inline;
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
 /*=== Cities Widget ===*/
 .main-footer .links-widget {
   position: relative;
@@ -4861,7 +4867,7 @@ Main Footer
   width: 100%;
   padding: 36px 0;
   text-align: center;
-  border-top: 1px solid #ECEDF2;
+  border-top: 1px solid #023401;
   min-height: 100px;
 }
 
@@ -4894,7 +4900,7 @@ Main Footer
 }
 
 .main-footer .copyright-text a:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: #9DB1BC;
 }
 
@@ -6483,7 +6489,7 @@ Job Categories
   color: #023401;
   font-weight: 600;
   line-height: 29px;
-	margin: 10px 0;
+	margin: 30px 0 10px 0;
 }
 
 .category-block-three h4 a {
@@ -12386,12 +12392,13 @@ Call To Action Two
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 60px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
 .call-to-action-two .sec-title {
-  margin-bottom: 33px;
+  margin-bottom: 20px;
+	text-align: start;
 }
 
 .call-to-action-two .btn-box {
@@ -12400,7 +12407,8 @@ Call To Action Two
 }
 
 .call-to-action-two .theme-btn {
-  margin: 0 10px 10px;
+	margin-top: 0 !important;
+  /*margin: 0 10px 10px;*/
 	padding: 10px 10px 10px 25px;
 	border-radius: 50px;
 	font-size: 18px;

@@ -11,6 +11,16 @@
 		<div class="auto-container">
 
 			<div class="row">
+				<div class="footer-column col-lg-3 col-md-3 col-sm-12">
+					<div class="logo text-center text-md-start">
+						<%= link_to root_path do %>
+							<%= image_tag('logo.png') %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
 				<div class="big-column col-xl-9 col-lg-9 col-md-12 mb-20">
 					<div class="row">
 						<div class="footer-column col-lg-3 col-md-6 col-sm-6 col-6">
@@ -78,28 +88,25 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="footer-column col-lg-4 col-md-4 col-sm-12">
-					<div class="logo text-center text-md-start">
-						<%= link_to root_path do %>
-							<%= image_tag('logo.png') %>
-						<% end %>
-					</div>
+		</div>
+	</div>
+	<!--Bottom-->
+	<div class="footer-bottom">
+		<div class="auto-container">
+			<div class="outer-box">
+				<div class="social-links">
+					<a href="<%= configatron.social_instagram_url %>" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a href="<%= configatron.social_tiktok_url %>" target="_blank"><i class="fab fa-tiktok"></i></a>
 				</div>
-				<div class="footer-column col-lg-8 col-md-8 col-sm-12">
-					<div class="footer-widget links-widget">
-						<div class="widget-content text-center text-md-end">
-							<ul class="list">
-								<li><a href="<%= privacy_path %>">Privacy Policy</a></li>
-								<li><a href="<%= terms_path %>">Terms &amp; Conditions</a></li>
-								<li>© 2024 By Gies Health</li>
-							</ul>
-						</div>
-					</div>
+				<div class="copyright-text">
+					<ul class="copyright-link">
+						<li><a href="<%= terms_path %>">Terms &amp; Conditions</a></li>
+						<li><a href="<%= privacy_path %>">Privacy Policy</a></li>
+						<li>© 2024 By Gies Health</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 </footer>
 <!-- End Main Footer -->
-
