@@ -14,7 +14,7 @@
 			<div class="image-column col-lg-5 col-md-5 col-sm-12">
 				<div class="inner-column wow fadeInRight">
 					<figure class="image text-start">
-						<%= image_tag("about-pic.png", class: "border-radius-8") %>
+						<%= image_tag("about-pic.png", class: "border-radius-half") %>
 					</figure>
 				</div>
 			</div>
@@ -28,16 +28,16 @@
 						<div class="text">
 							As leaders in their fields, their expertise is valuable in advising and supporting our patients through uncertain times.
 						</div>
-						<div class="text">
+						<div class="text" style="margin-bottom:40px;">
 							Our hospital prioritizes patient care and comfort, and will always lay a helping hand in your medical journey,
 							whether it be standard medical check-ups or treating patients who need immediate care.
 						</div>
+						<a href="<%= about_path %>" class="theme-btn btn-style-three">Learn More</a>
 					</div>
-					<a href="<%= about_path %>" class="theme-btn btn-style-three">Learn More</a>
 				</div>
-				<div class="inner-column mt-50 wow fadeInRight d-block d-md-none">
-					<figure class="image">
-						<%= image_tag("mission-img.png") %>
+				<div class="inner-column align-items-end wow fadeInRight">
+					<figure class="image text-end">
+						<%= image_tag("logo-shadow.png") %>
 					</figure>
 				</div>
 			</div>
