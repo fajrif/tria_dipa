@@ -1,4 +1,4 @@
-<section class="founder-section layout-pt-60 layout-pb-60">
+<section class="layout-pt-40 layout-pb-60">
 	<div class="auto-container">
 		<div class="row justify-content-between align-items-end">
 			<div class="col-lg-9">
@@ -8,8 +8,27 @@
 			</div>
 		</div>
 
-		<div class="row grid-base pt-50 wow fadeInUp">
-			<%= render partial: "doctor", collection: @doctors %>
+		<div class="row grid-base pt-50">
+			<% @doctors.each do |doctor| %>
+				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-box" style="padding-right:0;">
+						<div class="content-box">
+							<figure class="image">
+								<% if doctor.photo.attached? %>
+									<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:150px;" %>
+								<% else %>
+									<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:150px;" %>
+								<% end %>
+							</figure>
+							<h4 class="name"><%= doctor.profesional_name %></h4>
+							<span class="designation">Available Today</span>
+							<div style="font-size:14px;margin-bottom:20px;">
+							</div>
+							<a href="#" class="theme-btn btn-style-three small">Make Appointment</a>
+						</div>
+					</div>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </section>

@@ -52,7 +52,7 @@ class Admins::SpecialistsController < Admins::BaseController
   private
 
   def params_specialist
-    params.require(:specialist).permit(:image, :name, :headline, :description)
+    params.require(:specialist).permit(:image, :image1, :name, :headline, :description)
   end
 
   def set_specialist

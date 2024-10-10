@@ -153,7 +153,7 @@ button {
 p,
 .text {
   font-size: 16px;
-  color: #181818;
+  color: #393939;
   line-height: 24px;
   font-weight: 400;
   margin: 0;
@@ -259,7 +259,7 @@ li {
   border-radius: 50%;
   line-height: 90px;
   text-align: center;
-  color: #181818181818;
+  color: #393939393939;
   font-size: 44px;
   transform: translate(-50%, -50%);
 }
@@ -297,7 +297,7 @@ Checkbox
   margin-bottom: 0;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .checkboxes label span {
@@ -393,7 +393,7 @@ Radio bOX
   position: relative;
   display: block;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 20px;
   padding-left: 30px;
   cursor: pointer;
@@ -558,7 +558,7 @@ input:checked + .slider:before {
   line-height: 30px;
   padding: 15px 20px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   background: #F0F5F7;
   border: 1px solid #F0F5F7;
   box-sizing: border-box;
@@ -591,7 +591,7 @@ input:checked + .slider:before {
 .default-form input.error:focus,
 .default-form select.error:focus,
 .default-form textarea.error:focus {
-  border-color: #ff1818180;
+  border-color: #ff3939390;
 }
 
 .default-form label.error {
@@ -600,7 +600,7 @@ input:checked + .slider:before {
   font-size: 13px;
   text-transform: capitalize;
   line-height: 24px;
-  color: #ff1818180;
+  color: #ff3939390;
   margin-bottom: 0;
 }
 
@@ -741,7 +741,7 @@ typography
   position: relative;
   font-size: 15px;
   line-height: 25px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 20px;
   padding-left: 30px;
 }
@@ -752,7 +752,7 @@ typography
   top: 3px;
   height: 18px;
   width: 18px;
-  background: #181818;
+  background: #393939;
   content: "\f00c";
   border-radius: 10px;
   color: #ffffff;
@@ -1063,7 +1063,7 @@ Scroll To Top
 }
 
 .social-share a.youtube {
-  background: #bb1818180;
+  background: #bb3939390;
 }
 
 .social-share a.instagram {
@@ -1175,7 +1175,7 @@ About Section
   max-width: 415px;
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
 }
 
 .about-section .list-style-one {
@@ -1213,7 +1213,7 @@ About Section
   align-items: center;
   font-size: 32px;
   padding-left: 5px;
-  color: #181818181818;
+  color: #393939393939;
   border-radius: 50%;
 }
 
@@ -1371,7 +1371,7 @@ About Section Two
   max-width: 415px;
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
 }
 
 .about-section-two .list-style-one {
@@ -1465,7 +1465,7 @@ About Section Two
 .applicants-list .applicant .designation {
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
 }
 
 .about-section-two .content-column .theme-btn {
@@ -1509,7 +1509,7 @@ About Section Three
 ***/
 .about-section-three {
   position: relative;
-  padding: 50px 0;
+  /*padding: 50px 0;*/
 }
 
 .about-section-three .images-box {
@@ -1556,7 +1556,7 @@ About Section Three
 .about-section-three .text-box p {
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 26px;
 }
 
@@ -1572,24 +1572,25 @@ Accordian Box
   position: relative;
   margin-bottom: 20px;
   border-radius: 8px;
-  border: 1px solid #ECEDF2;
+  /*border: 1px solid #ECEDF2;*/
   transition: all 300ms ease;
 }
 
 .accordion-box .block .acc-btn {
   position: relative;
   font-size: 16px;
-  padding: 17px 30px;
+  padding: 10px 30px;
   line-height: 30px;
-  color: #202124;
-  font-weight: 500;
-  background: transparent;
+  color: #fff;
+  font-weight: 900;
+  background: #023501;
+	border-radius: 8px;
   cursor: pointer;
   transition: all 300ms ease;
 }
 
 .accordion-box .block.active-block {
-  box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
+  /*box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);*/
 }
 
 .accordion-box .block .acc-btn .icon {
@@ -1622,14 +1623,14 @@ Accordian Box
 .accordion-box .block .content {
   position: relative;
   padding: 24px 30px 26px;
-  border-top: 1px solid #ECEDF2;
+  /*border-top: 1px solid #ECEDF2;*/
 }
 
 .accordion-box .block .content p {
   position: relative;
   font-size: 15px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   margin-bottom: 24px;
   transition: all 300ms ease;
@@ -1973,7 +1974,7 @@ Buttons Styles
 
 .btn-style-two:hover {
   color: #202124;
-  background-color: #E9A181818;
+  background-color: #E9A393939;
 }
 
 /* Btn Style Three */
@@ -1986,7 +1987,7 @@ Buttons Styles
 	text-transform: uppercase;
 	line-height: 20px;
 	border-radius: 25px;
-	border: 1.5px solid #023401;
+	border: 1px solid #023401;
 	font-weight: 500;
 	padding: 10px 25px;
 }
@@ -1995,6 +1996,27 @@ Buttons Styles
   color: #FFFFFF !important;
   border-color: #FF8506 !important;
   background-color: #FF8506;
+}
+
+/* Btn Style Five */
+.btn-style-five {
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 20px;
+	border-radius: 25px;
+	border: 1px solid #fff;
+	font-weight: 500;
+	padding: 10px 25px;
+}
+
+.btn-style-five:hover {
+  color: #023401 !important;
+  border-color: #FF8506 !important;
+  background-color: #fff;
 }
 
 .call-to-action-two .btn-transparent:hover .icon-special {
@@ -2047,25 +2069,6 @@ Buttons Styles
 .btn-style-four:hover {
   color: #FFFFFF;
   background-color: #34A853;
-}
-
-/* Btn Style Five */
-.btn-style-five {
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  color: #302EA7;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  line-height: 20px;
-  border-radius: 8px;
-  font-weight: 400;
-  padding: 14px 35px;
-}
-
-.btn-style-five:hover {
-  color: #ffffff;
-  background-color: transparent;
 }
 
 /* Btn Style Six */
@@ -2241,7 +2244,7 @@ Callout Two
   background-color: #ffffff;
   line-height: 140px;
   text-align: center;
-  color: #181818181818;
+  color: #393939393939;
   border-radius: 50%;
   min-width: auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
@@ -2549,7 +2552,7 @@ Top Companies
   justify-content: center;
   font-size: 14px;
 	line-height: 22px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 25px;
 }
 
@@ -2634,7 +2637,7 @@ Top Companies
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .company-block-two .location i {
@@ -2717,7 +2720,7 @@ Top Companies
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -2730,11 +2733,11 @@ Top Companies
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .company-block-three .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .company-block-three .bookmark-btn {
@@ -2846,7 +2849,7 @@ Top Companies
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -2859,11 +2862,11 @@ Top Companies
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .company-block-four .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .company-block-four .job-type {
@@ -2985,11 +2988,11 @@ Contact Section
 .contact-block p {
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
 }
 
 .contact-block p a {
-  color: #181818;
+  color: #393939;
 }
 
 .contact-block p .phone {
@@ -3090,7 +3093,7 @@ Contact Section
   line-height: 30px;
   font-weight: 400;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   text-align: left;
   text-transform: capitalize;
   border-radius: 8px;
@@ -3101,7 +3104,7 @@ Contact Section
   position: relative;
   margin-right: 15px;
   font-size: 22px;
-  color: #181818;
+  color: #393939;
   text-align: center;
   transition: all 500ms ease;
 }
@@ -3892,7 +3895,7 @@ User Sidebar
   line-height: 30px;
   font-weight: 400;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   text-align: left;
   text-transform: capitalize;
   border-radius: 8px;
@@ -3903,7 +3906,7 @@ User Sidebar
   position: relative;
   margin-right: 15px;
   font-size: 22px;
-  color: #181818;
+  color: #393939;
   text-align: center;
   transition: all 500ms ease;
 }
@@ -3991,7 +3994,7 @@ User Sidebar
 .skills-percentage p {
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 25px;
 }
 
@@ -4126,7 +4129,7 @@ Chat Widget
   height: 50px !important;
   overflow-y: auto;
   font-size: 14px;
-  color: #181818 !important;
+  color: #393939 !important;
   line-height: 20px;
   padding: 15px 30px;
 }
@@ -4225,7 +4228,7 @@ Chat Widget
   font-size: 14px;
   line-height: 19px;
   text-align: right;
-  color: #181818;
+  color: #393939;
   margin-left: 10px;
 }
 
@@ -4251,7 +4254,7 @@ Chat Widget
 }
 
 .offline {
-  background-color: #ff1818180 !important;
+  background-color: #ff3939390 !important;
 }
 
 .user_info {
@@ -4295,7 +4298,7 @@ Chat Widget
   top: 20px;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -4325,7 +4328,7 @@ Chat Widget
   padding: 23px 30px 20px;
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   max-width: 60%;
   margin-bottom: 5px;
 }
@@ -4476,7 +4479,7 @@ Chat Widget
   height: 45px;
   padding: 10px 20px;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
   background: #F0F5F7;
 }
@@ -4486,7 +4489,7 @@ Chat Widget
 }
 
 .widget-title .chosen-container-single .chosen-single div:after {
-  color: #181818;
+  color: #393939;
   content: "\f17c";
   font-family: 'Flaticon';
   font-size: 10px;
@@ -4512,7 +4515,7 @@ Chat Widget
   padding: 5px 20px;
   padding-left: 54px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   background: #F0F5F7;
   border-radius: 8px;
   transition: all 500ms ease;
@@ -4527,7 +4530,7 @@ Chat Widget
   position: absolute;
   left: 0;
   top: 0;
-  color: #181818;
+  color: #393939;
   height: 45px;
   width: 54px;
   z-index: 1;
@@ -4561,7 +4564,7 @@ Chat Widget
   padding-left: 47px;
   font-size: 15px;
   line-height: 25px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   min-height: 35px;
   margin-bottom: 25px;
@@ -4726,7 +4729,7 @@ Main Footer
 	position: relative;
 	font-size: 22px;
 	font-weight: 500;
-	color: #181818;
+	color: #393939;
 	line-height: 1.4em;
 	/*margin-bottom: 30px;*/
 }
@@ -4765,12 +4768,12 @@ Main Footer
 .main-footer .address {
   font-size: 14px;
   line-height: 30px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
 .main-footer .address a {
-  color: #181818;
+  color: #393939;
 }
 .flex-center {
 	display: flex;
@@ -4821,7 +4824,7 @@ Main Footer
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  color: #181818;
+  color: #393939;
   margin-bottom: 15px;
 }
 
@@ -4890,13 +4893,13 @@ Main Footer
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
-  color: #181818;
+  color: #393939;
   padding: 0;
 }
 
 .main-footer .copyright-text a {
   display: inline-block;
-  color: #181818;
+  color: #023401;
   line-height: 30px;
   transition: all 300ms ease;
 }
@@ -4924,7 +4927,7 @@ Main Footer
   margin: 0 8px;
   font-size: 16px;
   line-height: 24px;
-  color: #181818;
+  color: #023401;
   transition: all 300ms ease;
 }
 
@@ -4959,7 +4962,7 @@ Main Footer
   width: 100%;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   background: #ffffff;
   padding: 15px 20px;
   padding-right: 60px;
@@ -5103,7 +5106,7 @@ Main Footer / Style Three
 
 .main-footer.style-three .widget-title,
 .main-footer.style-three .widget-title > a{
-  color: #181818;
+  color: #393939;
 }
 
 .main-footer.style-three .copyright-text,
@@ -5114,7 +5117,7 @@ Main Footer / Style Three
 .main-footer.style-three .address a,
 .main-footer.style-three .phone-num,
 .main-footer.style-three .phone-num a {
-  color: #181818;
+  color: #393939;
 }
 .main-footer.style-three .social-links a {
   color: #023401;
@@ -5342,7 +5345,7 @@ Main Footer / Style Five
   line-height: 30px;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   border: 1px solid #ECEDF2;
   box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
 }
@@ -5365,7 +5368,7 @@ Main Footer / Style Five
   display: block;
   font-size: 14px;
   line-height: 25px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 15px;
 }
 
@@ -5454,7 +5457,7 @@ Main Footer / Style Six
   padding: 30px 0 50px;
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
 }
 
 /***
@@ -5489,7 +5492,7 @@ Fun Fact Section
 .fun-fact-section .counter-title {
   font-size: 15px;
   line-height: 30px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   display: block;
 }
@@ -5503,7 +5506,7 @@ Fun Fact Section
 }
 
 .fun-fact-section.style-two .counter-title {
-  color: #181818;
+  color: #393939;
 }
 
 /*** 
@@ -5722,7 +5725,7 @@ Main Header
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   white-space: nowrap;
   text-transform: capitalize;
   cursor: pointer;
@@ -5855,7 +5858,7 @@ Main Header
 
 .main-header .menu-btn .icon {
   font-size: 24px;
-  color: #181818;
+  color: #393939;
 }
 
 .main-header .menu-btn .count {
@@ -6344,7 +6347,7 @@ Job Categories
 
 .category-block p {
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -6415,7 +6418,7 @@ Job Categories
 
 .category-block-two p {
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -6464,7 +6467,8 @@ Job Categories
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  text-align: start;
 }
 
 .category-block-three .icon {
@@ -6488,12 +6492,13 @@ Job Categories
   color: #023401;
   font-weight: 600;
   line-height: normal;
-	margin: 30px 0 10px 0;
+	margin: 20px 0 10px 0;
 }
 
 .category-block-three h4 a {
   color: #023401;
   transition: all 300ms ease;
+	font-size: 25px;
 }
 
 .category-block-three h4 a:hover {
@@ -6502,7 +6507,7 @@ Job Categories
 
 .category-block-three p {
   font-size: 16px;
-  color: #1E1E1E;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -6660,7 +6665,7 @@ Job Section
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -6673,11 +6678,11 @@ Job Section
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block .bookmark-btn {
@@ -6828,7 +6833,7 @@ Job Section Two
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -6841,11 +6846,11 @@ Job Section Two
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-two .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-two .bookmark-btn {
@@ -6962,7 +6967,7 @@ Job Section Three
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -6975,11 +6980,11 @@ Job Section Three
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-three .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-three .bookmark-btn {
@@ -7106,7 +7111,7 @@ Job Section Four
   display: inline-block;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
 }
@@ -7117,11 +7122,11 @@ Job Section Four
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-four .location a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-four .post-tags {
@@ -7139,14 +7144,14 @@ Job Section Four
   border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
   border-radius: 20px;
   margin: 0 5px 10px;
 }
 
 .job-block-four .post-tags li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-four .post-tags li.colored {
@@ -7271,7 +7276,7 @@ Job Section Five
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -7284,11 +7289,11 @@ Job Section Five
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-five .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-five .bookmark-btn {
@@ -7510,7 +7515,7 @@ Job Detail Section
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-right: 20px;
@@ -7523,11 +7528,11 @@ Job Detail Section
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-seven .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .job-block-seven .job-other-info {
@@ -7615,7 +7620,7 @@ Job Detail Section
   position: relative;
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 26px;
 }
 
@@ -7678,7 +7683,7 @@ Job Detail Section
   position: relative;
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   padding-left: 20px;
   margin-bottom: 25px;
 }
@@ -7747,7 +7752,7 @@ Job Detail Section
   font-weight: 500;
   font-size: 26px;
   line-height: 35px;
-  color: #181818181818;
+  color: #393939393939;
   margin-bottom: 10px;
 }
 
@@ -7858,7 +7863,7 @@ Job Detail Section
   display: block;
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
   border-radius: 4px;
   background: #FFFFFF;
 }
@@ -7910,7 +7915,7 @@ List Style Two
   position: relative;
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
   cursor: default;
   padding-left: 22px;
   margin-bottom: 20px;
@@ -8113,7 +8118,7 @@ Login Popup
   content: "\f175";
   position: relative;
   font-size: 12px;
-  color: #181818;
+  color: #393939;
   width: 40px;
   font-weight: 700;
   display: flex;
@@ -8394,7 +8399,7 @@ Login Section
   z-index: 1;
   border-radius: 50%;
   cursor: pointer;
-  -webkit-perspective: 1181818;
+  -webkit-perspective: 1393939;
 }
 
 .face {
@@ -8627,7 +8632,7 @@ Map Listing Item
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-right: 20px;
@@ -8639,11 +8644,11 @@ Map Listing Item
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .map-listing-item .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 /***
@@ -9034,7 +9039,7 @@ Page Title
   display: inline-block;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 0 8px;
   text-transform: capitalize;
 }
@@ -9046,7 +9051,7 @@ Page Title
   content: "/";
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .page-breadcrumb li:last-child::after {
@@ -9258,7 +9263,7 @@ Progress Bars
   width: 0px;
   border-radius: 10px;
   border-bottom: 10px solid #023401;
-  transition: all 2181818ms ease;
+  transition: all 2393939ms ease;
 }
 
 .bar-item .skill-header {
@@ -9515,7 +9520,7 @@ Registeration Banners
 .manage-job-table tbody td {
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .manage-job-table h6 {
@@ -9529,7 +9534,7 @@ Registeration Banners
 .manage-job-table .info {
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
 }
 
 .manage-job-table .package,
@@ -10127,7 +10132,7 @@ b:before {
   font-size: 15px;
   line-height: 25px;
   text-align: right;
-  color: #181818;
+  color: #393939;
 }
 
 .company-widget .social-links {
@@ -10138,7 +10143,7 @@ b:before {
 .company-widget .social-links a {
   font-size: 14px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-left: 17px;
   transition: all 300ms ease;
 }
@@ -10219,7 +10224,7 @@ Job Detail Section / Style two
 .social-media-widget .social-links a {
   font-size: 14px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-left: 17px;
   transition: all 300ms ease;
 }
@@ -10504,7 +10509,7 @@ default table
   position: relative;
   padding: 21px 30px;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -10548,7 +10553,7 @@ Default Tabs
 }
 
 .default-tabs .tab-buttons li a {
-  color: #202124;
+  color: #fff;
 }
 
 .default-tabs .tabs-content {
@@ -10576,7 +10581,7 @@ Default Tabs
   border-radius: 0;
   border: 0;
   font-size: 16px;
-  color: #181818;
+  color: #393939;
   border-bottom: 3px solid transparent;
   background: none;
   margin: 0;
@@ -10659,7 +10664,7 @@ Testimonial Section
 .testimonial-block .text {
   font-size: 16px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 50px;
 }
 
@@ -10684,7 +10689,7 @@ Testimonial Section
 
 .testimonial-block .name {
   font-size: 16px;
-  color: #181818;
+  color: #393939;
   font-weight: 500;
 }
 
@@ -10692,7 +10697,7 @@ Testimonial Section
   position: relative;
   display: block;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .testimonial-section.style-two {
@@ -10823,7 +10828,7 @@ Testimonial Section Two
 .testimonial-block-two .text {
   font-size: 16px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 35px;
 }
 
@@ -10844,7 +10849,7 @@ Testimonial Section Two
   position: relative;
   display: block;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .testimonial-carousel .owl-dots {
@@ -10978,7 +10983,7 @@ Testimonial Section Three
 .testimonial-block-three .text {
   font-size: 16px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 60px;
 }
 
@@ -10999,7 +11004,7 @@ Testimonial Section Three
   position: relative;
   display: block;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .testimonial-section-three .owl-dots {
@@ -11131,7 +11136,7 @@ Radio bOX
 .tooltip-btn {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   line-height: 30px;
   padding: 10px 20px;
@@ -11200,7 +11205,7 @@ Radio bOX
 .uploading-resume .cv-uploadButton .text {
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 28px;
 }
 
@@ -11252,7 +11257,7 @@ Radio bOX
   font-size: 15px;
   line-height: 20px;
   text-align: center;
-  color: #181818;
+  color: #393939;
 }
 
 .file-edit-box .edit-btns {
@@ -11374,12 +11379,12 @@ Browse Jobs
   display: block;
   font-size: 15px;
   line-height: 30px;
-  color: #181818;
+  color: #393939;
 }
 
 .links-list li a {
   display: inline-block;
-  color: #181818;
+  color: #393939;
   transition: all 200ms ease;
 }
 
@@ -11483,7 +11488,7 @@ Candidates Section
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 25px;
 }
 
@@ -11508,6 +11513,11 @@ Candidates Section Two
 ====================================================================
 
 ***/
+
+.border-bottom-green {
+	border-bottom: 1px solid #023401;
+}
+
 .candidates-section-two {
   position: relative;
   padding: 100px 0 70px;
@@ -11515,7 +11525,7 @@ Candidates Section Two
 
 .candidate-block-two {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .candidate-block-two .inner-box {
@@ -11577,7 +11587,7 @@ Candidates Section Two
 .candidate-block-two .location {
   position: relative;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-two .location i {
@@ -11663,7 +11673,7 @@ Candidates Section Two
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -11676,11 +11686,11 @@ Candidates Section Two
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-three .candidate-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-three .candidate-info li.designation {
@@ -11703,14 +11713,14 @@ Candidates Section Two
   border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
   border-radius: 20px;
   margin-right: 10px;
 }
 
 .candidate-block-three .post-tags li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-three .post-tags li.colored {
@@ -11938,7 +11948,7 @@ Candidates Section Two
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin: 0 15px 5px;
@@ -11950,11 +11960,11 @@ Candidates Section Two
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-four .job-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-four .post-tags {
@@ -11972,14 +11982,14 @@ Candidates Section Two
   border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
   border-radius: 20px;
   margin: 0 5px 10px;
 }
 
 .candidate-block-four .post-tags li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-four .post-tags li.colored {
@@ -12091,7 +12101,7 @@ Candidate Detail Section
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-bottom: 5px;
@@ -12104,11 +12114,11 @@ Candidate Detail Section
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-five .candidate-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-five .candidate-info li.designation {
@@ -12267,7 +12277,7 @@ Candidate Detail Section
   position: relative;
   font-size: 14px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   padding-left: 25px;
   margin-top: 5px;
@@ -12281,11 +12291,11 @@ Candidate Detail Section
   top: 0;
   font-size: 16px;
   line-height: 22px;
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-six .candidate-info li a {
-  color: #181818;
+  color: #393939;
 }
 
 .candidate-block-six .bookmark-btn {
@@ -12503,7 +12513,7 @@ Call To Action Four
 .call-to-action-four p {
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 25px;
 }
 
@@ -12670,7 +12680,7 @@ Invoice Section
   position: relative;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .invoice-wrap .info span {
@@ -12818,7 +12828,7 @@ Listing Section  (Ls Section)
   left: 0;
   top: 0;
   height: 100%;
-  width: 1181818%;
+  width: 1393939%;
   background: #1b2032;
   z-index: 99;
   opacity: 0;
@@ -12941,7 +12951,7 @@ Listing Section  (Ls Section)
   height: 25px;
   border: 1px solid #333;
   border-radius: 50%;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
   font-size: 12px;
   z-index: 99;
@@ -12966,7 +12976,7 @@ Listing Section  (Ls Section)
   position: relative;
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -12994,7 +13004,7 @@ Listing Section  (Ls Section)
   padding-left: 54px;
   line-height: 30px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   background: #FFFFFF;
   box-shadow: none;
   border: 1px solid #ECEDF2;
@@ -13039,7 +13049,7 @@ Listing Section  (Ls Section)
   border-radius: 4px;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
 }
 
@@ -13166,7 +13176,7 @@ Ls Outer
   height: 45px;
   padding: 10px 20px;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
   background: #F0F5F7;
 }
@@ -13176,7 +13186,7 @@ Ls Outer
 }
 
 .ls-switcher .sort-by .chosen-container-single .chosen-single div:after {
-  color: #181818;
+  color: #393939;
   content: "\f17c";
   font-family: 'Flaticon';
   font-size: 10px;
@@ -13190,7 +13200,7 @@ Ls Outer
   position: relative;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .ls-switcher .showing-result .text strong {
@@ -13283,7 +13293,7 @@ Listing Pagination
   position: relative;
   margin: 0 5px;
   font-size: 14px;
-  color: #181818;
+  color: #393939;
   line-height: 45px;
   min-width: 45px;
   font-weight: 400;
@@ -13293,7 +13303,7 @@ Listing Pagination
 .ls-pagination li a {
   position: relative;
   display: block;
-  color: #181818;
+  color: #393939;
   border-radius: 50%;
   transition: all 300ms ease;
 }
@@ -13324,7 +13334,7 @@ Listing Pagination
 .ls-section .copyright-text {
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
 }
 
 .ls-pagination li.next a:hover,
@@ -13528,7 +13538,7 @@ News Section
   position: relative;
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-right: 15px;
   padding-left: 20px;
   margin-bottom: 5px;
@@ -13541,7 +13551,7 @@ News Section
   margin-top: -3px;
   height: 6px;
   width: 6px;
-  background: #181818;
+  background: #393939;
   border-radius: 5px;
   content: "";
 }
@@ -13579,7 +13589,7 @@ News Section
 .news-block .lower-content .text {
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 15px;
 }
 
@@ -13756,7 +13766,7 @@ News Section Three
   position: relative;
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-right: 15px;
   padding-left: 20px;
   margin-bottom: 5px;
@@ -13769,7 +13779,7 @@ News Section Three
   margin-top: -3px;
   height: 6px;
   width: 6px;
-  background: #181818;
+  background: #393939;
   border-radius: 5px;
   content: "";
 }
@@ -13803,7 +13813,7 @@ News Section Three
 .news-block-two .content-box .text {
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 15px;
 }
 
@@ -13887,7 +13897,7 @@ Pricing Section
   position: relative;
   font-size: 14px;
   line-height: 30px;
-  color: #181818;
+  color: #393939;
   cursor: pointer;
   z-index: 8;
   padding: 0 48px 0;
@@ -14006,7 +14016,7 @@ Pricing Section
   position: relative;
   font-size: 14px;
   line-height: 25px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
   margin-bottom: 20px;
   padding-left: 30px;
@@ -14216,7 +14226,7 @@ steps Section
   font-weight: 500;
   font-size: 26px;
   line-height: 38px;
-  color: #181818181818;
+  color: #393939393939;
 }
 
 .steps-list {
@@ -14313,7 +14323,7 @@ Subscribe Section
   width: 100%;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   background: #ffffff;
   padding: 20px 30px;
   padding-right: 60px;
@@ -14423,7 +14433,7 @@ TNC Section
 .tnc-section p {
   font-size: 15px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 24px;
 }
 
@@ -14482,7 +14492,7 @@ TNC Section
   width: 100%;
   height: 60px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 30px;
   font-weight: 400;
   background: #ffffff;
@@ -14646,7 +14656,7 @@ Blog Grid
   padding: 20px 20px;
   padding-left: 54px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   background: #FFFFFF;
   border: 1px solid #ECEDF2;
   border-radius: 8px;
@@ -14696,7 +14706,7 @@ Blog Grid
   font-size: 15px;
   line-height: 25px;
   padding-left: 15px;
-  color: #181818;
+  color: #393939;
   transition: all 300ms ease;
 }
 
@@ -14803,7 +14813,7 @@ Blog Grid
   display: block;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
   font-weight: 400;
   text-align: center;
@@ -14861,7 +14871,7 @@ Blog Single
   align-items: center;
   font-size: 16px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   padding-left: 15px;
   margin-right: 10px;
 }
@@ -14873,7 +14883,7 @@ Blog Single
   height: 5px;
   width: 5px;
   border-radius: 3px;
-  background: #181818;
+  background: #393939;
   content: "";
 }
 
@@ -14921,7 +14931,7 @@ Blog Single
 .blog-single p {
   font-size: 16px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 20px;
 }
 
@@ -14960,7 +14970,7 @@ Blog Single
 
 .blockquote-style-one cite {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   display: block;
   font-style: normal;
   margin-top: 11px;
@@ -14998,7 +15008,7 @@ Blog Single
   border-radius: 30px;
   font-size: 14px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding: 5px 20px;
   border-radius: 4px;
   margin-right: 10px;
@@ -15144,13 +15154,13 @@ Comments Area
 .comment-box .title {
   font-size: 14px;
   line-height: 19px;
-  color: #181818;
+  color: #393939;
 }
 
 .comment-box .text {
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 20px;
 }
 
@@ -15312,7 +15322,7 @@ Cart Section
 
 .cart-section .totals-table .price {
   font-size: 14px;
-  color: #181818;
+  color: #393939;
 }
 
 .cart-section .proceed-btn {
@@ -15452,7 +15462,7 @@ CheckOut Page
 .order-box .cart-item td {
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -15521,7 +15531,7 @@ CheckOut Page
   margin-top: 10px;
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
 }
 
 .payment-box .payment-options li .radio-option input:checked + label .small-text {
@@ -15589,7 +15599,7 @@ Order Slip
 .order-confirmation .upper-box .text {
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .order-confirmation .order-info {
@@ -15611,7 +15621,7 @@ Order Slip
   display: flex;
   font-size: 15px;
   line-height: 20px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 40px;
 }
 
@@ -15698,7 +15708,7 @@ Products Section
   font-size: 15px;
   line-height: 20px;
   display: block;
-  color: #181818;
+  color: #393939;
 }
 
 .product-block .theme-btn {
@@ -15824,7 +15834,7 @@ Shop Single
   line-height: 19px;
   -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
-  color: #181818;
+  color: #393939;
   margin-left: 10px;
 }
 
@@ -15871,7 +15881,7 @@ Shop Single
   top: 0px;
   height: 18px;
   width: 18px;
-  background: #181818;
+  background: #393939;
   content: "\f00c";
   border-radius: 10px;
   color: #ffffff;
@@ -15907,7 +15917,7 @@ Shop Single
   align-items: center;
   font-size: 15px;
   line-height: 30px;
-  color: #181818;
+  color: #393939;
 }
 
 .product-details .product-meta li span {
@@ -15973,7 +15983,7 @@ Product Tabs
 .prod-tabs .content p {
   font-size: 15px;
   line-height: 26px;
-  color: #181818;
+  color: #393939;
   margin-bottom: 26px;
 }
 
@@ -16038,6 +16048,7 @@ Product Tabs
 }
 .category-block-three.-type-2 > .inner-box > .content > img {
 	margin-bottom: 20px;
+	width: auto;
 }
 .category-block-three.-type-2:hover > .inner-box > .content > img {
 	filter: brightness(0) invert(1);
@@ -16116,13 +16127,7 @@ Product Tabs
 }
 
 .bg-orange {
-  background-color: #FB803E !important;
-  transition: all 0.2s ease-out;
-}
-
-.bg-orange:hover {
-  background-color: #9073EC !important;
-  color: white;
+  background-color: #FF8506 !important;
 }
 
 .bg-light-blue {
@@ -16348,6 +16353,16 @@ Product Tabs
   .layout-pb-60 {
     padding-bottom: 50px !important;
   }
+}
+
+.orange-card {
+	border-radius: 8px;
+	color: #fff;
+  background-color: #FF8506;
+	padding: 20px 30px;
+}
+.orange-card h4 {
+	font-size: 30px;
 }
 
 .pricingCard {
@@ -16702,6 +16717,11 @@ Product Tabs
 	margin-top: -100px;
 }
 
+.margin-left-right-100 {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
 .margin-left-right-150 {
 	margin-left: 150px;
 	margin-right: 150px;
@@ -16970,7 +16990,7 @@ Product Tabs
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  color: #181818;
+  color: #393939;
   padding: 0;
   background-color: transparent;
 }
@@ -16991,7 +17011,7 @@ Product Tabs
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
-  color: #181818;
+  color: #393939;
 }
 
 .job-block.-type-2 .inner-footer > .content .company-logo {
@@ -17055,7 +17075,7 @@ Product Tabs
   margin-top: 5px;
   font-size: 14px;
   line-height: 1;
-  color: #181818;
+  color: #393939;
 }
 
 .blog.-type-1 .blog-image img {
@@ -17070,7 +17090,7 @@ Product Tabs
   font-weight: 400;
   line-height: 1.5;
 	margin-bottom: 20px;
-  color: #181818;
+  color: #393939;
 }
 
 .blog.-type-1 .blog-content h4 {
@@ -17156,7 +17176,7 @@ Product Tabs
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  color: #181818;
+  color: #393939;
 }
 
 .testimonial.-type-2 .image img {
@@ -17206,7 +17226,7 @@ Product Tabs
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
-  color: #181818;
+  color: #393939;
 }
 
 .banner-section.-type-13 {
@@ -17642,7 +17662,7 @@ Product Tabs
 }
 
 .color-dark-2 {
-  color: #181818 !important;
+  color: #393939 !important;
 }
 
 .button.-arrow {
@@ -18056,7 +18076,7 @@ Product Tabs
   font-family: 'Helvetica', sans-serif;
   font-size: 15px;
   line-height: 1;
-  color: #181818;
+  color: #393939;
 }
 
 .sec-title.-type-3 .big-text {
@@ -18183,7 +18203,7 @@ Product Tabs
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
 }
 
 .blog-block.-type-2 .block-footer > a {
@@ -18506,6 +18526,9 @@ Product Tabs
 	display: flex;
 	justify-content: start;
 	overflow-x: scroll;
+	background-color: #023401;
+	padding: 20px;
+	border-radius: 8px;
 }
 
 .tab-buttons.-pills-condensed {
@@ -18793,10 +18816,10 @@ Product Tabs
 }
 
 .tab-buttons.-pills-condensed.-blue .active-btn {
-	background-color: transparent !important;
+	background-color: #ff8505 !important;
 	color: #202124;
-	border-bottom: 2px solid #ff8505 !important;
-	border-radius: 0;
+	border-radius: 7px;
+	padding: 10px 20px;
 }
 
 .call-to-action-two.-type-4 .theme-btn {
@@ -18868,7 +18891,7 @@ Product Tabs
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
   margin-top: 10px;
 }
 
@@ -18961,7 +18984,7 @@ Product Tabs
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
-  color: #181818;
+  color: #393939;
 }
 
 @media (max-width: 991px) {
@@ -19140,7 +19163,7 @@ Product Tabs
   font-size: 50px;
   font-weight: 700;
   line-height: 1.2;
-  color: #181818;
+  color: #393939;
 }
 
 @media (max-width: 991px) {
@@ -19204,7 +19227,7 @@ Product Tabs
 
 .banner-section-three.-type-17 .popular-searches {
   margin-top: 40px;
-  color: #181818;
+  color: #393939;
 }
 
 @media (max-width: 991px) {
@@ -19634,7 +19657,7 @@ Banner Section Three
 
 .banner-section-three .content-column .text {
 	width: 65%;
-  color: #181818;
+  color: #393939;
   font-size: 22px;
   line-height: 28px;
 }
@@ -19642,7 +19665,7 @@ Banner Section Three
 .banner-section-three .popular-searches {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -19851,14 +19874,14 @@ Banner Section Five
 
 .banner-section-five .content-column .text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
 }
 
 .banner-section-five .popular-searches {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -19988,14 +20011,14 @@ Banner Section Six
 
 .banner-section-six .content-column .text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
 }
 
 .banner-section-six .popular-searches {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -20117,14 +20140,14 @@ Banner Section Seven
 
 .banner-section-seven .content-column .text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
 }
 
 .banner-section-seven .popular-searches {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -20614,7 +20637,7 @@ Info Blocks
 
 .info_block_three .sub-text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   display: block;
 }
 
@@ -20681,7 +20704,7 @@ Info Blocks
 
 .info_block_four .sub-text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   display: block;
 }
 
@@ -20763,14 +20786,14 @@ Banner Section
 
 .banner-section .content-column .text {
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 25px;
 }
 
 .banner-section .popular-searches {
   position: relative;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   font-weight: 400;
 }
 
@@ -20968,7 +20991,7 @@ Work Section
 .work-block p {
   font-size: 14px;
   line-height: 24px;
-  color: #181818;
+  color: #393939;
 }
 
 /* Job Search Form Two*/
@@ -21034,7 +21057,7 @@ Work Section
   width: 100%;
   height: 30px;
   font-size: 15px;
-  color: #181818;
+  color: #393939;
   line-height: 20px;
   font-weight: 400;
   background: #ffffff;
@@ -21077,7 +21100,7 @@ Work Section
 }
 
 .calendar-specialists > .form-inner li > a {
-	color: #181818;
+	color: #393939;
 }
 
 .calendar-specialists > .form-inner li.active,
@@ -21107,7 +21130,7 @@ Work Section
 	font-weight: 200;
 	float: right;
 	transform: rotate(45deg);
-	color: #181818;
+	color: #393939;
 }
 .theme-btn.smaller {
 	padding: 5px 15px;

@@ -11,6 +11,14 @@
 		</td>
 	</tr>
 	<% end %>
+	<% if @specialist.image1.attached? %>
+	<tr>
+		<td><b>Image 1</b></td>
+		<td>
+			<%= image_tag @specialist.image1.variant(resize_to_limit: [100,100]) %>
+		</td>
+	</tr>
+	<% end %>
 	<tr>
 		<td><b>Name</b></td>
 		<td><h5 class="fs-14 mb-0 text-body"><%= @specialist.name %></h5></td>
