@@ -928,6 +928,7 @@ Icons
 img {
   display: inline-block;
   max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -1147,7 +1148,7 @@ About Section
 ***/
 .about-section {
   position: relative;
-  padding: 50px 0 0;
+  padding: 70px 0 0;
 }
 
 .about-section .content-column {
@@ -1308,12 +1309,13 @@ About Ssection / Style Two
 
 .about-section.style-two .content-column .sec-title .text {
   max-width: 100%;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 .about-section.style-two .sec-title {
-  margin-bottom: 43px;
+  margin: 40px;
+	margin-bottom: 0;
 }
 
 .about-section.style-two .content-column .theme-btn {
@@ -5608,18 +5610,15 @@ Main Header
 
 .main-menu .navigation > li {
   position: relative;
-  margin-right: 20px;
+  margin-right: 50px;
   padding: 20px 0;
   transition: all 300ms ease;
 }
 
-.main-menu .navigation > li.active:after,
-.main-menu .navigation > li:hover:after {
-	content: "";
-	width: 100%;
-	height: 1.2px;
-	background: #023401;
-	position: absolute;
+.main-menu .navigation > li.active a,
+.main-menu .navigation > li:hover a {
+	font-weight: 900;
+	color: #FF8506;
 }
 
 .main-menu .navigation > li > span,
@@ -6442,7 +6441,7 @@ Job Categories
 	align-items: start;
 }
 .fun-fact-section .category-block-three h4 {
-	font-size: 18px;
+	font-size: 30px;
 }
 .fun-fact-section .category-block-three h4,
 .fun-fact-section .category-block-three p,
@@ -6488,7 +6487,7 @@ Job Categories
   font-size: 16px;
   color: #023401;
   font-weight: 600;
-  line-height: 29px;
+  line-height: normal;
 	margin: 30px 0 10px 0;
 }
 
@@ -6545,6 +6544,13 @@ Job Categories
 .category-block-three:nth-child(8) .icon {
   background: #D4F4F8;
   color: #00D0EA;
+}
+
+.border-radius-half {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
 }
 
 /* Style Two  */
@@ -16276,6 +16282,10 @@ Product Tabs
   padding-bottom: 0 !important;
 }
 
+.pb-70 {
+  padding-bottom: 70px !important;
+}
+
 .layout-pt-0 {
   padding-top: 0 !important;
 }
@@ -16688,12 +16698,18 @@ Product Tabs
 .margin-top--150 {
 	margin-top: -150px;
 }
+.margin-top--100 {
+	margin-top: -100px;
+}
 
 .margin-left-right-150 {
 	margin-left: 150px;
 	margin-right: 150px;
 }
 
+.ml-0 {
+	margin-left: 0 !important;
+}
 .mr-20 {
 	margin-right: 20px;
 }
@@ -16701,6 +16717,9 @@ Product Tabs
 	margin-left: 20px;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
 .mt-9 {
   margin-top: 9px !important;
 }
@@ -16712,6 +16731,9 @@ Product Tabs
   margin-top: 50px !important;
 }
 
+.mt-20 {
+  margin-top: 20px !important;
+}
 .mt-24 {
   margin-top: 24px !important;
 }
