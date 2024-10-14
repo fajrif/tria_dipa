@@ -14593,12 +14593,12 @@ Blog Grid
 
 ***/
 .blog-grid .news-block .inner-box {
-  border: 1px solid #ECEDF2;
+  border: 1px solid #bac6ba;
   border-radius: 8px;
 }
 
 .blog-grid .news-block .inner-box:hover {
-  box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
+	box-shadow: 0px 6px 15px rgb(186 198 186 / 50%);
 }
 
 .sidebar-page-container {
