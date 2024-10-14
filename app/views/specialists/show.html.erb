@@ -1,53 +1,74 @@
-<section class="layout-pt-60 layout-pb-100">
-	<div class="auto-container">
-		<div class="row justify-content-center align-items-center text-center">
-			<div class="section-title-page col-lg-12">
-				<h2 class="fw-700">SPECIALIST DETAIL</h2>
-				<div class="text"><%= @specialist.headline %></div>
-			</div>
-		</div>
-	</div>
-</section>
 
-<!-- About Section -->
-<section class="about-section specialist style-two layout-pt-0">
-	<div class="auto-container">
-		<div class="row">
-			<!-- Image Column -->
-			<div class="image-column col-lg-6 col-md-12 col-sm-12">
-				<figure class="image wow fadeInLeft">
-					<%= image_tag url_for(@specialist.image) if @specialist.image.attached?  %>
-				</figure>
-			</div>
+    <!-- Sidebar Page Container -->
+    <div class="sidebar-page-container layout-pt-60 layout-pb-100">
+      <div class="auto-container">
+        <div class="row">
+          <!--Sidebar Side-->
+          <div class="sidebar-side col-lg-3 col-md-3 col-sm-12">
+            <aside class="sidebar blog-sidebar">
 
-			<!-- Content Column -->
-			<div class="content-column col-lg-6 col-md-12 col-sm-12">
-				<div class="inner-column wow fadeInUp">
-					<div class="sec-title">
-						<h2><%= @specialist.name %></h2>
-						<div class="text mr-20">
-							<%= raw @specialist.description %>
+              <!-- Shop Widget -->
+              <div class="sidebar-widget catagory-widget bg-green text-white">
+                <ul class="catagory-list">
+									<% @specialists.each do |specialist| %>
+										<li>
+											<%= link_to specialist_path(specialist), class: "#{ 'active' if @specialist.id == specialist.id }" do %>
+												<%= image_tag specialist.image.variant(resize: "100x100").processed if specialist.image.attached? %> <%= specialist.name.downcase.titleize %>
+											<% end %>
+										</li>
+									<% end %>
+                </ul>
+              </div>
+
+            </aside>
+          </div>
+
+          <!--Content Side-->
+          <div class="content-side col-lg-9 col-md-9 col-sm-12">
+
+						<!-- Job Block -->
+						<div class="job-block-seven">
+							<div class="inner-box">
+								<div class="content">
+									<% if @specialist.image.attached? %>
+									<span class="company-logo">
+										<%= image_tag @specialist.image.variant(resize: "200x200").processed %>
+									</span>
+									<% end %>
+									<h4><%= @specialist.name.downcase.titleize %></h4>
+									<p><%= @specialist.headline %></p>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End About Section -->
-<%= render "available_doctors" unless @doctors.empty? %>
 
-<style>
-	.content-column {
-		margin-bottom: 0 !important;
-	}
-	.image-column img {
-		width: 250px;
-	}
-	.text p {
-		margin-bottom: 20px;
-	}
-	.about-section.style-two .content-column h2 {
-		font-size: 46px;
-	}
-</style>
+            <div class="blog-grid">
+              <div class="row">
+								<% @doctors.each do |doctor| %>
+									<!-- News Block -->
+									<div class="news-block col-lg-3 col-md-6 col-sm-12">
+										<div class="inner-box">
+											<div class="image-box">
+												<figure class="image">
+													<% if doctor.photo.attached? %>
+														<%= image_tag doctor.photo.variant(resize: "284x344").processed %>
+													<% else %>
+														<%= image_tag "doctor-avatar.png", class: "border-radius-8" %>
+													<% end %>
+												</figure>
+											</div>
+											<div class="lower-content">
+												<h3><a href="<%= doctor_path(doctor) %>"><%= doctor.profesional_name %></a></h3>
+												<p class="text">Available Today</p>
+												<a href="#" class="theme-btn btn-style-three small">Make Appointment</a>
+											</div>
+										</div>
+									</div>
+								<% end %>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Sidebar Container -->

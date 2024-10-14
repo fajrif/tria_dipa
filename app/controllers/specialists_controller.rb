@@ -15,6 +15,7 @@ class SpecialistsController < ApplicationController
   end
 
   def show
+		@specialists = Specialist.all
 		@specialist = Specialist.friendly.find(params[:id])
 		@doctors = @specialist.doctors
   end
