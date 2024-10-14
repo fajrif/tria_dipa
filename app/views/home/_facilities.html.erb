@@ -16,7 +16,7 @@
 									<%= image_tag facility.thumbnail.variant(resize: "276x276").processed, class: "border-radius-8" %>
 								</a>
 							</figure>
-							<h4 class="name"><%= link_to facility.name, facility_path(facility), class: "text-black" %></h4>
+							<h4 class="name"><%= link_to facility.name.downcase.titleize, facility_path(facility), class: "text-green" %></h4>
 							<div class="location"><%= facility.headline.truncate(100) %></div>
 							<%= link_to "Learn More", facility_path(facility), class: "theme-btn btn-style-three small" %>
 						</div>

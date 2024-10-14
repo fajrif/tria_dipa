@@ -2530,8 +2530,8 @@ Top Companies
 .company-block .name {
   position: relative;
   display: block;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
   font-weight: 400;
   color: #202124;
   margin-bottom: 5px;
@@ -6431,10 +6431,21 @@ Job Categories
 
 .category-block-three .inner-box {
 	position: relative;
-	padding: 20px;
+	padding: 10px 20px;
 	text-align: center;
   transition: all 300ms ease;
 }
+.category-block-three .inner-box > .content {
+	border-bottom: 2px solid #fff;
+}
+
+.category-block-three .inner-box:hover h4 {
+	color: #ff8505;
+}
+.category-block-three .inner-box:hover > .content {
+	border-bottom: 2px solid #ff8505;
+}
+
 .fun-fact-section .category-block-three .inner-box {
 	background: #023401;
 	padding: 40px 40px;
@@ -6469,6 +6480,7 @@ Job Categories
   flex-direction: column;
   align-items: start;
   text-align: start;
+	padding-bottom: 25px;
 }
 
 .category-block-three .icon {
@@ -6488,21 +6500,11 @@ Job Categories
 }
 
 .category-block-three h4 {
-  font-size: 16px;
+	font-size: 22px;
   color: #023401;
   font-weight: 600;
   line-height: normal;
 	margin: 20px 0 10px 0;
-}
-
-.category-block-three h4 a {
-  color: #023401;
-  transition: all 300ms ease;
-	font-size: 25px;
-}
-
-.category-block-three h4 a:hover {
-  color: #023401;
 }
 
 .category-block-three p {
@@ -7452,6 +7454,7 @@ Job Detail Section
 
 .job-block-seven {
   position: relative;
+	margin-bottom: 50px;
 }
 
 .job-block-seven .inner-box {
@@ -7465,7 +7468,12 @@ Job Detail Section
 .job-block-seven .content {
   position: relative;
   padding-left: 120px;
-  min-height: 51px;
+  padding-right: 150px;
+  min-height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: start;
 }
 
 .job-block-seven.style-two .content {
@@ -7489,9 +7497,9 @@ Job Detail Section
   position: relative;
   font-weight: 500;
   font-size: 26px;
-  line-height: 1.3em;
+  line-height: 1em;
   color: #202124;
-  top: -3px;
+  /*top: -3px;*/
   margin-bottom: 10px;
 }
 
@@ -11535,14 +11543,14 @@ Candidates Section Two
   align-items: center;
   padding: 25px 30px;
   background: #FFFFFF;
-  border: 1px solid #ECEDF2;
+  border: 1px solid #bac6ba;
   box-sizing: border-box;
   border-radius: 8px;
   transition: all 300ms ease;
 }
 
 .candidate-block-two .inner-box:hover {
-  box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
+  box-shadow: 0px 6px 15px rgb(186 198 186 / 50%);
 }
 
 .candidate-block-two .content-box {
@@ -14598,10 +14606,10 @@ Blog Grid
 
 .blog-sidebar {
   position: relative;
-  background: #F5F7FC;
-  padding: 30px;
+  background: #023401;
+  padding: 30px 20px;
   border-radius: 8px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
 }
 
 .blog-sidebar .sidebar-widget {
@@ -14623,9 +14631,8 @@ Blog Grid
 .sidebar-title h4 {
   position: relative;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #202124;
+  font-size: 26px;
+  line-height: 1em;
 }
 
 /*Search Box*/
@@ -14703,28 +14710,47 @@ Blog Grid
 .catagory-list li a {
   position: relative;
   display: block;
-  font-size: 15px;
-  line-height: 25px;
-  padding-left: 15px;
-  color: #393939;
-  transition: all 300ms ease;
+	font-size: 18px;
+  line-height: 22px;
+  padding: 5px 10px;
+  color: #fff;
 }
 
-.catagory-list li a:before {
-  position: absolute;
-  left: 0;
-  top: 11px;
-  height: 4px;
-  width: 4px;
-  border-radius: 4px;
-  background: #202124;
-  content: "";
-  transition: all 300ms ease;
-}
+/* titik category */
+/*.catagory-list li a:before {*/
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*top: 11px;*/
+  /*height: 4px;*/
+  /*width: 4px;*/
+  /*border-radius: 4px;*/
+  /*background: #202124;*/
+  /*content: "";*/
+  /*transition: all 300ms ease;*/
+/*}*/
 
-.catagory-list li a:hover:before,
+.catagory-list li a {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+.catagory-list li a > img {
+	width: 30px;
+	margin-right: 10px;
+	filter: brightness(0) invert(1);
+	/*visibility: hidden;*/
+}
+/*.catagory-list li a.active > img,*/
+/*.catagory-list li a:hover > img {*/
+	/*visibility: visible;*/
+/*}*/
+
+.catagory-list li a.active,
+.catagory-list li a:hover:after,
 .catagory-list li a:hover {
-  color: #023401;
+	background: #FF8506;
+	border-radius: 8px;
+  color: #fff;
 }
 
 /*=== Latest News ===*/
@@ -17100,10 +17126,10 @@ Product Tabs
 
 .blog.-type-1 .blog-content h4 a {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 0;
   color: #023401;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .subscribe-section-two.-type-2 .background-image {

@@ -19,7 +19,7 @@
 							</a>
 						</div>
 						<div class="blog-content">
-							<h4><%= link_to facility.name, facility_path(facility) %></h4>
+							<h4><%= link_to facility.name.downcase.titleize, facility_path(facility) %></h4>
 							<div><%= facility.headline.truncate(200) %></div>
 							<a href="<%= facility_path(facility) %>" class="theme-btn btn-style-three small">Learn More</a>
 						</div>

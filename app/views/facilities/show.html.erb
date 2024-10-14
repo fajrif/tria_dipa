@@ -3,7 +3,7 @@
 	<div class="auto-container">
 		<div class="row justify-content-center align-items-center text-center">
 			<div class="section-title-page col-lg-12">
-				<h2 class="fw-700"><%= @facility.name %></h2>
+				<h2 class="fw-700"><%= @facility.name.downcase.titleize %></h2>
 				<div style="font-size:20px;"><%= @facility.headline %></div>
 			</div>
 		</div>
