@@ -6468,6 +6468,12 @@ Job Categories
 .fun-fact-section .category-block-three p {
 	margin-bottom: 30px;
 }
+.fun-fact-section .category-block-three .inner-box > .content {
+	border-bottom: none;
+}
+.fun-fact-section .category-block-three .content {
+	padding-bottom: 0;
+}
 
 .category-block-three .inner-box:hover {
   /*box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);*/
