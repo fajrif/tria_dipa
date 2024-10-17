@@ -8294,49 +8294,84 @@ Login Section
 	min-width: 200px;
 }
 
-.login-form > .form-inner > ol.list-programs {
-	list-style-type: none;
-	counter-reset: li;
-	padding-inline-start: 0;
-	margin-bottom: 40px;
+/*.login-form > .form-inner > ol.list-programs {*/
+	/*list-style-type: none;*/
+	/*counter-reset: li;*/
+	/*padding-inline-start: 0;*/
+	/*margin-bottom: 40px;*/
+/*}*/
+
+/*.login-form > .form-inner li {*/
+	/*font-size: 1.4rem;*/
+	/*padding: 30px 0 20px 0;*/
+	/*border-bottom: 2px solid #fff;*/
+/*}*/
+
+/*.login-form > .form-inner > ol.list-programs:first-child {*/
+	/*padding-top: 0;*/
+/*}*/
+
+/*.login-form > .form-inner li > a {*/
+	/*color: #fff;*/
+/*}*/
+
+/*.login-form > .form-inner li:hover {*/
+	/*border-color: #FF8506;*/
+/*}*/
+/*.login-form > .form-inner li:hover:before,*/
+/*.login-form > .form-inner li:hover:after,*/
+/*.login-form > .form-inner li:hover > a {*/
+	/*color: #FF8506;*/
+/*}*/
+
+/*.login-form > .form-inner li:before {*/
+  /*counter-increment: li;*/
+  /*content: counter(li, decimal-leading-zero);*/
+	/*color: #fff;*/
+	/*margin-right: 30px;*/
+/*}*/
+
+/*.login-form > .form-inner li:after {*/
+	/*content:'\2197';*/
+	/*font-size: 40px;*/
+	/*text-align: right;*/
+	/*float: right;*/
+	/*transform: rotate(45deg);*/
+/*}*/
+
+.accordion-box.list-programs {
+	margin-bottom: 0;
 }
 
-.login-form > .form-inner li {
-	font-size: 1.4rem;
-	padding: 30px 0 20px 0;
-	border-bottom: 2px solid #fff;
+.accordion-box.list-programs .block .acc-btn {
+	font-size: 1.6rem;
+	background: transparent;
+  padding: 10px 0;
+	border-radius: 0;
 }
 
-.login-form > .form-inner > ol.list-programs:first-child {
-	padding-top: 0;
-}
+/*.accordion-box.list-programs .block .acc-btn:before {*/
+	/*counter-increment: li;*/
+	/*content: counter(li, decimal-leading-zero);*/
+	/*color: #FF8506;*/
+	/*margin-right: 30px;*/
+/*}*/
 
-.login-form > .form-inner li > a {
+.accordion-box.list-programs .block .acc-btn .icon {
 	color: #fff;
 }
 
-.login-form > .form-inner li:hover {
-	border-color: #FF8506;
-}
-.login-form > .form-inner li:hover:before,
-.login-form > .form-inner li:hover:after,
-.login-form > .form-inner li:hover > a {
+.accordion-box.list-programs .block .acc-btn.active .icon,
+.accordion-box.list-programs .block .acc-btn.active {
 	color: #FF8506;
 }
 
-.login-form > .form-inner li:before {
-  counter-increment: li;
-  content: counter(li, decimal-leading-zero);
-	color: #fff;
-	margin-right: 30px;
+.accordion-box.list-programs .block .acc-btn.active {
+	border-bottom: 2px solid #FF8506;
 }
 
-.login-form > .form-inner li:after {
-	content:'\2197';
-	font-size: 40px;
-	text-align: right;
-	float: right;
-	transform: rotate(45deg);
+.accordion-box.list-programs .block .content {
+	padding: 24px 10px 24px 55px;
 }
 
 .social-btn-two {
