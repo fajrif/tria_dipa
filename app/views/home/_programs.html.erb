@@ -5,16 +5,61 @@
 			<div class="form-inner">
 				<h1>
 					TRIA DIPA HOSPITAL<br/>
-					OBGYN PROGRAM
+					PROGRAM
 				</h1>
 
-				<ol class="list-programs">
-					<li><a href="#">Pregnancy</a></li>
-					<li><a href="#">Childbirth</a></li>
-					<li><a href="#">Postpartum</a></li>
-					<li><a href="#">Caesarean Section</a></li>
-					<li><a href="#">Placenta Banking</a></li>
-				</ol>
+            <!--Accordian Box-->
+            <ol class="accordion-box list-programs">
+              <!--Block-->
+              <li class="accordion block active-block" id="heading1">
+								<div class="acc-btn active"><span class="mr-20">01.</span> General Check-Up <span class="icon flaticon-add"></span></div>
+                <div class="acc-content current">
+                  <div class="content">
+										<p class="text-white">Our general check-up gives you a routine examination to assess your overall health. We can detect any potential health issues and advise you on preventive care to ensure your optimal wellness.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block" id="heading2">
+                <div class="acc-btn"><span class="mr-20">02.</span> Laboratory Services <span class="icon flaticon-add"></span></div>
+                <div class="acc-content">
+                  <div class="content">
+										<p class="text-white">The laboratory services include blood work, urine analysis, tissue sampling, and more. It will help doctors diagnose conditions and make informed medical decisions on the progress of your treatment.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block" id="heading3">
+                <div class="acc-btn"><span class="mr-20">03.</span> Radiology <span class="icon flaticon-add"></span></div>
+                <div class="acc-content">
+                  <div class="content">
+										<p class="text-white">Using imaging technologies such as X-rays, MRI’s and CT scans, our doctors can diagnose diseases and injuries. This non-invasive approach allows doctors to look into the body and guide treatment plans.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block" id="heading4">
+                <div class="acc-btn"><span class="mr-20">04.</span> Emergency <span class="icon flaticon-add"></span></div>
+                <div class="acc-content">
+                  <div class="content">
+										<p class="text-white">We offer 24/7 emergency services for people who need immediate medical attention, injuries, and life-threatening conditions. Our team is trained to have rapid response and stabilize patients in urgent needs.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!--Block-->
+              <li class="accordion block" id="heading5">
+                <div class="acc-btn"><span class="mr-20">05.</span> Rehabilitation <span class="icon flaticon-add"></span></div>
+                <div class="acc-content">
+                  <div class="content">
+										<p class="text-white">Whether you’re recovering from surgery, injury, or illness, we provide therapy and support for all patients. Our focus is to help you regain your strength and mobility, until you’re make a full recovery.</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
 
 				<div class="bottom-box">
 					<div class="btn-box row">
@@ -29,11 +74,27 @@
 			</div>
 		</div>
 	</div>
-	<div class="image-layer" style="background-image: url(<%= image_url("tria-dipa-programs.png") %>);"></div>
+	<div class="custom-images">
+		<div id="img_1" class="image-layer" style="background-image: url(<%= image_url("programs/general-check-up.jpg") %>);"></div>
+		<div id="img_2" class="image-layer d-none" style="background-image: url(<%= image_url("programs/laboratory-services.jpg") %>);"></div>
+		<div id="img_3" class="image-layer d-none" style="background-image: url(<%= image_url("programs/radiology.jpg") %>);"></div>
+		<div id="img_4" class="image-layer d-none" style="background-image: url(<%= image_url("admin-bg.png") %>);"></div>
+		<div id="img_5" class="image-layer d-none" style="background-image: url(<%= image_url("tria-dipa-programs.png") %>);"></div>
+	</div>
 </div>
 <!-- End Info Section -->
-<div class="image-column col-auto d-block d-md-none">
-	<figure class="image">
-		<%= image_tag("tria-dipa-programs.png") %>
-	</figure>
-</div>
+
+<%= content_for :tail do %>
+<script>
+	$(document).ready(function() {
+		$(".accordion.block").click(function() {
+			$target = $(this).attr('id');
+			id= $target.match(/\d+/);
+			console.log(id);
+			$('.custom-images div.image-layer').addClass('d-none');
+			$('#img_'+id).removeClass('d-none');
+
+		});
+	});
+</script>
+<% end %>
