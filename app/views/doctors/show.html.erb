@@ -19,18 +19,26 @@
 					<div class="content-column col-lg-8 col-md-12 col-sm-12">
 						<div class="inner-column wow fadeInUp">
 							<div class="sec-title mt-0">
-								<h2 style="margin-bottom:10px;"><%= @doctor.profesional_name %></h2>
+								<h2 style="margin-bottom:5px;"><%= @doctor.profesional_name %></h2>
 								<div style="font-size:18px;margin-bottom:50px;font-weight:900;"><%= @doctor.title %></div>
 
 								<ul class="accordion-box">
 									<!--Block-->
 									<li class="accordion block active-block">
 										<div class="acc-btn active">Doctor Schedule <span class="icon flaticon-add"></span></div>
-										<div class="acc-content current">
-											<div class="content">
-												<%= raw @doctor.operational_hours_label %>
-											</div>
-										</div>
+												<div class="table-outer">
+													<table class="default-table">
+														<tbody>
+														<% @doctor.schedules.each do |s| %>
+															<tr>
+																<td><%= s.day_name %></td>
+																<td><%= s.start_time %></td>
+																<td><%= s.end_time %></td>
+															</tr>
+														<% end %>
+														</tbody>
+													</table>
+												</div>
 									</li>
 								</ul>
 
@@ -66,6 +74,6 @@
 		margin-bottom: 20px;
 	}
 	.about-section.style-two .content-column h2 {
-		font-size: 30px;
+		font-size: 22px;
 	}
 </style>

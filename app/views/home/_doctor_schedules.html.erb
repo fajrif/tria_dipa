@@ -14,8 +14,8 @@
 	<!-- Content Column -->
 	<div class="content-column col-8">
 		<div class="inner-column">
-			<div class="sec-title" style="margin-bottom:23px;margin-top:23px;">
-				<span class="text-green" style="font-size:18px;"><strong><%= doctor.profesional_name %></strong></span><br/>
+			<div class="sec-title">
+				<span class="text-green" style="font-size:18px;"><strong><%= link_to doctor.profesional_name, doctor_path(doctor) %></strong></span><br/>
 				<p><%= doctor.title %></p>
 				<%= raw doctor.operational_hours_label %><br/>
 				<a href="#" class="link_book_doctors theme-btn btn-style-three smaller" data-id="<%= doctor.id %>">Make Appointment</a>

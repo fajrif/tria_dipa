@@ -90,7 +90,7 @@ Rails.application.routes.draw do
 		resources :facilities, :only => [:index, :show]
 		resources :appointments, :only => [:new, :create]
 		# resources :institutions, :only => [:index, :show]
-		resources :doctors, :only => [:index, :show]
+		resources :doctors, :only => [:show]
 		resources :specialists, :only => [:index, :show]
 
 		match 'terms', to: 'home#terms', via: :get, as: :terms
