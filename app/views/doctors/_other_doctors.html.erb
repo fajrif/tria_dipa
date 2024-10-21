@@ -15,12 +15,12 @@
 						<div class="content-box">
 							<figure class="image">
 								<% if doctor.photo.attached? %>
-									<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:150px;" %>
+									<%= image_tag url_for(doctor.photo), class: "border-radius-8", style: "width:80px;" %>
 								<% else %>
-									<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:150px;" %>
+									<%= image_tag "doctor-avatar.png", class: "border-radius-8", style: "width:80px;" %>
 								<% end %>
 							</figure>
-							<h4 class="name"><%= doctor.profesional_name %></h4>
+							<h4 class="name"><%= link_to doctor.profesional_name, doctor_path(doctor), class: "text-black" %></h4>
 							<span class="designation">Available Today</span>
 							<div style="font-size:14px;margin-bottom:20px;">
 							</div>
