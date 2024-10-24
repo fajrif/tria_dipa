@@ -6448,7 +6448,7 @@ Job Categories
 
 .fun-fact-section .category-block-three .inner-box {
 	background: #023401;
-	padding: 40px 40px;
+	padding: 25px 40px;
 }
 
 .fun-fact-section .category-block-three .content {
@@ -16106,6 +16106,7 @@ Product Tabs
 
 .category-block-three.-type-2 .inner-box {
   border-radius: 10px;
+  height: 100%;
 }
 
 @media (max-width: 991px) {
