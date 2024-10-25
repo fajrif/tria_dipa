@@ -5,22 +5,33 @@
         <div class="row">
           <!--Sidebar Side-->
           <div class="sidebar-side col-lg-3 col-md-3 col-sm-12">
-            <aside class="sidebar blog-sidebar">
-
-              <!-- Shop Widget -->
-              <div class="sidebar-widget catagory-widget bg-green text-white">
-                <ul class="catagory-list">
-									<% @specialists.each do |specialist| %>
-										<li>
-											<%= link_to specialist_path(specialist), class: "#{ 'active' if @specialist.id == specialist.id }" do %>
-												<%= image_tag specialist.image.variant(resize: "100x100").processed if specialist.image.attached? %> <%= specialist.name.downcase.titleize %>
-											<% end %>
-										</li>
-									<% end %>
-                </ul>
-              </div>
-
-            </aside>
+						<% unless mobile_device? %>
+							<aside class="sidebar blog-sidebar d-none d-md-block">
+								<!-- Shop Widget -->
+								<div class="sidebar-widget catagory-widget bg-green text-white">
+									<ul class="catagory-list">
+										<% @specialists.each do |specialist| %>
+											<li>
+												<%= link_to specialist_path(specialist), class: "#{ 'active' if @specialist.id == specialist.id }" do %>
+													<%= image_tag specialist.image.variant(resize: "100x100").processed if specialist.image.attached? %> <%= specialist.name.downcase.titleize %>
+												<% end %>
+											</li>
+										<% end %>
+									</ul>
+								</div>
+							</aside>
+						<% else %>
+							<!--Tabs Box-->
+							<div class="default-tabs" id="specialist-list">
+								<div class="tab-buttons-wrap">
+									<ul class="tab-buttons -pills-condensed -blue">
+										<% @specialists.each do |specialist| %>
+											<li class="tab-btn <%= 'active-btn' if specialist.id == @specialist.id %>"><%= link_to specialist.name.downcase.titleize, specialist_path(specialist) %></li>
+										<% end %>
+									</ul>
+								</div>
+							</div>
+						<% end %>
           </div>
 
           <!--Content Side-->

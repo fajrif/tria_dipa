@@ -1302,7 +1302,7 @@ About Ssection / Style Two
 .about-section.style-two .content-column h2 {
   font-weight: 500;
   font-size: 56px;
-  line-height: 38px;
+  line-height: 28px;
   color: #023401;
 	margin-bottom: 30px;
 }
@@ -3190,7 +3190,7 @@ Contact Section
 }
 
 .mm-menu_fullscreen.mm-menu_position-bottom {
-  top: 80px;
+  top: 70px;
 }
 
 .mm-navbar_sticky {
@@ -6242,7 +6242,7 @@ Mobile Header
   font-size: 30px;
   line-height: 30px;
   cursor: pointer;
-  margin-left: 80px;
+  margin-left: 120px;
   width: 30px;
   color: #202124;
   order: 3;
@@ -11649,6 +11649,22 @@ Candidates Section Two
   width: 100%;
 }
 
+.fun-fact-section .candidate-block-two .inner-box {
+	background: #023401;
+}
+
+.fun-fact-section .candidate-block-two .content-box {
+	text-align: start;
+	padding-left: 70px;
+}
+
+.fun-fact-section .candidate-block-two .image {
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 50px;
+}
+
 /* Candidate block three */
 .candidate-block-three {
   position: relative;
@@ -16758,6 +16774,10 @@ Product Tabs
   padding-top: 50px !important;
 }
 
+.pt-20 {
+  padding-top: 20px !important;
+}
+
 .pt-24 {
   padding-top: 24px !important;
 }
@@ -20483,7 +20503,7 @@ Banner Section Ten
   background-size: cover;
   min-height: 100vh;
   text-align: center;
-  padding: 370px 0 37px;
+  padding: 0 0 0 0;
 }
 
 .banner-section-ten .auto-container {

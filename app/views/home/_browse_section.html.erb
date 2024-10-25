@@ -1,9 +1,9 @@
 <!-- Fun Fact Section -->
-<section class="fun-fact-section style-two">
+<section class="fun-fact-section style-two d-none d-md-block">
 	<div class="auto-container">
 		<div class="row wow fadeInUp">
 			<!-- Category Block -->
-			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-6">
+			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-12">
 				<div class="inner-box" onclick="location.href='/specialists/neurology';">
 					<div class="content">
 						<%= image_tag("icons/doctor.png") %>
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 			<!-- Category Block -->
-			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-6">
+			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-12">
 				<div class="inner-box" onclick="location.href='<%= specialists_path %>';">
 					<div class="content">
 						<%= image_tag("icons/stetoscope.png") %>
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 			<!-- Category Block -->
-			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-6">
+			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-12">
 				<div class="inner-box">
 					<div class="content">
 						<%= image_tag("icons/hospital.png") %>
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<!-- Category Block -->
-			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-6">
+			<div class="category-block-three -type-2 col-lg-3 col-md-6 col-12">
 				<div class="inner-box" onclick="location.href='<%= contact_path %>';">
 					<div class="content">
 						<%= image_tag("icons/location.png") %>
@@ -42,6 +42,64 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</section>
+<!-- Fun Fact Section -->
+
+<!-- Fun Fact Section -->
+<section class="fun-fact-section style-two d-block d-md-none">
+	<div class="auto-container">
+		<div class="row">
+
+				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInLeft">
+					<div class="inner-box" onclick="location.href='/specialists/neurology';">
+						<div class="content-box">
+							<figure class="image">
+								<%= image_tag("icons/doctor.png") %>
+							</figure>
+							<h4 style="margin-bottom:8px;"><a class="text-white" href="/specialists/neurology" style="font-size:20px;">Find Doctors</a></h4>
+							<p class="text-white" style="line-height:20px;">Take a look at our directory and connect with the healthcare professional you are looking for.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInLeft">
+					<div class="inner-box" onclick="location.href='<%= specialists_path %>';">
+						<div class="content-box">
+							<figure class="image">
+								<%= image_tag("icons/stetoscope.png") %>
+							</figure>
+							<h4 style="margin-bottom:8px;"><a class="text-white" href="<%= specialists_path %>" style="font-size:20px;">Browse Specialists</a></h4>
+							<p class="text-white" style="line-height:20px;">Explore the wide range of specialties we offer, and find the right highly qualified specialist for your specific health needs.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInLeft">
+					<div class="inner-box" onclick="location.href='<%= facilities_path %>';">
+						<div class="content-box">
+							<figure class="image">
+								<%= image_tag("icons/hospital.png") %>
+							</figure>
+							<h4 style="margin-bottom:8px;"><a class="text-white" href="<%= facilities_path %>" style="font-size:20px;">Check Our Facilities</a></h4>
+							<p class="text-white" style="line-height:20px;">Take a look at our modern, patient-focused facilities, designed for your comfort and care. See how we can support your health and recovery</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="candidate-block-two col-lg-4 col-md-12 col-sm-12 wow fadeInLeft">
+					<div class="inner-box" onclick="location.href='<%= contact_path %>';">
+						<div class="content-box">
+							<figure class="image">
+								<%= image_tag("icons/location.png") %>
+							</figure>
+							<h4 style="margin-bottom:8px;"><a class="text-white" href="<%= contact_path %>" style="font-size:20px;">Locate Tria Dipa</a></h4>
+							<p class="text-white" style="line-height:20px;">Get the information you need to reach us in a breeze with a map of our location and detailed directions.</p>
+						</div>
+					</div>
+				</div>
+
 		</div>
 	</div>
 </section>

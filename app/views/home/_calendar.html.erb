@@ -2,14 +2,14 @@
 <section class="about-section style-two">
 	<div class="auto-container">
 		<div class="row justify-content-between align-items-end">
-			<div class="col-lg-10">
+			<div class="col-lg-10 text-center text-md-start">
 				<h2 class="fw-700">
 					BOOK APPOINTMENT
 				</h2>
 			</div>
 		</div>
-		<div class="row pt-30">
-			<div class="col-lg-4 col-12">
+		<div class="row pt-20">
+			<div class="col-lg-4 col-12 mb-20">
 				<div class="category-block-two calendar-left">
 					<%= render "calendar_left" %>
 				</div>
@@ -29,6 +29,10 @@
 	<style>
 		.calendar_wrapper .form-control.input {
 			display: none;
+		}
+		.flatpickr-calendar.arrowTop::before,
+		.flatpickr-calendar.arrowTop::after {
+			border-bottom-color: #fff;
 		}
 	</style>
 	<script>
