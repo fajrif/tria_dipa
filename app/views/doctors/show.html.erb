@@ -26,19 +26,19 @@
 									<!--Block-->
 									<li class="accordion block active-block">
 										<div class="acc-btn active">Doctor Schedule <span class="icon flaticon-add"></span></div>
-												<div class="table-outer">
-													<table class="default-table">
-														<tbody>
-														<% @doctor.schedules.each do |s| %>
-															<tr>
-																<td><%= s.day_name %></td>
-																<td><%= s.start_time %></td>
-																<td><%= s.end_time %></td>
-															</tr>
-														<% end %>
-														</tbody>
-													</table>
-												</div>
+										<div class="table-outer">
+											<table class="default-table">
+												<tbody>
+												<% @doctor.schedules.each do |s| %>
+													<tr>
+														<td><%= s.day_name %></td>
+														<td><%= s.start_time %></td>
+														<td><%= s.end_time %></td>
+													</tr>
+												<% end %>
+												</tbody>
+											</table>
+										</div>
 									</li>
 								</ul>
 
