@@ -22,7 +22,7 @@
 							</figure>
 							<h4 class="name"><%= link_to doctor.profesional_name, doctor_path(doctor), class: "text-black" %></h4>
 							<span class="designation">Available Today</span>
-							<a href="https://wa.me/<%= configatron.wa_number %>?text=<%= url_encode("Halo saya ingin menjadwalkan appointment \ndengan *#{doctor.profesional_name}* \npada (TANGGAL DAN JAM)") %>" class="theme-btn btn-style-three small">Make Appointment</a>
+							<a href="https://wa.me/<%= configatron.wa_number %>?text=<%= url_encode("Halo saya ingin menjadwalkan appointment \ndengan *#{doctor.profesional_name}* \npada (TANGGAL DAN JAM)\n\nNama: \nNIK: \nTgl Lahir: \nJenis Kelamin: \nNo.HP: ") %>" class="theme-btn btn-style-three small">Make Appointment</a>
 						</div>
 					</div>
 				</div>
