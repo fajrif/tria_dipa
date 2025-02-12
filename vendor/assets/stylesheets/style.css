@@ -6204,7 +6204,8 @@ Mobile Header
 	width: 30%;
 }
 .mobile-header .logo img {
-  max-height: 50px;
+  /*max-height: 50px;*/
+  width: 180px;
 }
 
 .mobile-header .nav-outer {
