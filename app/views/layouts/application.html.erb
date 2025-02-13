@@ -4,21 +4,21 @@
 	<meta name="google-site-verification" content="<%= configatron.google_site_verification %>" />
 	<title><%= @meta_title.nil? ? configatron.site_title : @meta_title %></title>
 	<meta name="title" content="<%= @meta_title.nil? ? configatron.site_title : @meta_title %>">
-	<meta name="description" content="<%= @meta_desc.nil? ? configatron.site_description : truncate_paragraph(@meta_desc,160) %>">
+	<meta name="description" content="<%= @meta_desc.nil? ? configatron.site_description : @meta_desc.truncate(160, omission: '...') %>">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="<%= request.original_url %>">
 	<meta property="og:title" content="<%= @meta_title.nil? ? configatron.site_title : @meta_title %>">
-	<meta property="og:description" content="<%= @meta_desc.nil? ? configatron.site_description : truncate_paragraph(@meta_desc,160) %>">
+	<meta property="og:description" content="<%= @meta_desc.nil? ? configatron.site_description : @meta_desc.truncate(160, omission: '...') %>">
 	<meta property="og:image" content="<%= configatron.image_logo_url %>">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="<%= request.original_url %>">
 	<meta property="twitter:title" content="<%= @meta_title.nil? ? configatron.site_title : @meta_title %>">
-	<meta property="twitter:description" content="<%= @meta_desc.nil? ? configatron.site_description : truncate_paragraph(@meta_desc,160) %>">
+	<meta property="twitter:description" content="<%= @meta_desc.nil? ? configatron.site_description : @meta_desc.truncate(160, omission: '...') %>">
 	<meta property="twitter:image" content="<%= configatron.image_logo_url %>">
 
   <!-- Responsive -->
@@ -33,7 +33,15 @@
 	<%= favicon_link_tag asset_path("favicon.png") %>
 	<%= csrf_meta_tag %>
 	<%= csp_meta_tag %>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3DKGY0DJZ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-G3DKGY0DJZ');
+	</script>
 </head>
 <body data-anm=".anm">
   <div class="page-wrapper">

@@ -708,8 +708,7 @@
 	.mm-add-listing,
 	#toggle-user-sidebar,
 	.nav-outer .mobile-nav-toggler{
-		display: flex;
-		justify-content: space-between;
+		display: block;
 	}
 
 	.nav-outer .mobile-nav-toggler{

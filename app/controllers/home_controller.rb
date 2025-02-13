@@ -13,6 +13,8 @@ class HomeController < ApplicationController
 
   def about
 		# get public about
+		@meta_title = "About RS Triadipa - Excellence in Healthcare Services"
+		@meta_desc = "Learn more about RS Triadipa's mission, vision, and commitment to providing exceptional healthcare services in Indonesia."
   end
 
   def terms
