@@ -1,6 +1,9 @@
 class DoctorsController < ApplicationController
 
   def index
+		@meta_title = "Meet Our Expert Doctors | RS Triadipa"
+		@meta_desc = "Get to know our team of experienced and compassionate doctors, dedicated to your health and wellness."
+
 		unless params[:search]
 			criteria = Doctor.all
 		else

@@ -99,6 +99,8 @@ Rails.application.routes.draw do
 		# match '/search-schedules', to: 'home#search_schedules', via: :get, as: :search_schedules
 		match '/search-events', to: 'home#search_events', via: :get, as: :search_events
 		match '/search-doctors/:specialist_id', to: 'home#search_doctors', via: :get, as: :search_doctors
+		match '/services', to: 'specialists#index', via: :get, as: :services
+		match '/services/:id', to: 'specialists#show', via: :get, as: :service
 
 		# match "/search", :to => 'search#index', via: :post, as: :search
 		# route to pages

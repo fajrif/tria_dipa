@@ -5,9 +5,9 @@
 #   configatron.emails.sales_reciept.subject = 'Thanks for your order'
 #
 #   configatron.file.storage = :s3
-configatron.site_title = "Tria Dipa Hospital | Medical & Healthcare"
-configatron.site_description = "Tria Dipa Hospital | Medical & Healthcare"
-configatron.image_logo_url = "https://image.bb/"
+configatron.site_title = "RS Triadipa - Your Trusted Healthcare Partner in Indonesia"
+configatron.site_description = "Discover top-notch healthcare services at RS Triadipa. We offer expert medical care, modern facilities, and compassionate service for your health needs."
+configatron.image_logo_url = "https://rs-triadipa.com/rs-triadipa-logo.png"
 configatron.google_site_verification = ""
 configatron.wa_number = "+628111201235"
 configatron.emergency_number = "+628111817890"

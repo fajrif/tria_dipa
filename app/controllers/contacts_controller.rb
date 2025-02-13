@@ -1,6 +1,8 @@
 class ContactsController < ApplicationController
 
 	def show
+		@meta_title = "Contact RS Triadipa"
+		@meta_desc = "Get in touch with RS Triadipa for appointments, inquiries, and support for your healthcare needs."
 	end
 
   def create
@@ -8,7 +10,6 @@ class ContactsController < ApplicationController
 		@inquiry = Contact.new(params_contact)
 
 		if @inquiry.valid?
-
 			unless @inquiry.use_v2.blank?
 				unless TriaDipa::Recaptcha.verify_recaptcha_v2?(params['g-recaptcha-response'], 'contact')
 					flash[:alert] = t('global.recaptcha_failed')
@@ -24,7 +25,6 @@ class ContactsController < ApplicationController
 					create_data
 				end
 			end
-
 		else
 			flash[:alert] = t('inquiries.errors')
 		end
