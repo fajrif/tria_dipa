@@ -5,8 +5,6 @@
 				<th class="text-center">ID</th>
 				<th>Image</th>
 				<th>Title</th>
-				<th>Section</th>
-				<th>Link Button</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -16,8 +14,6 @@
 					<td class="text-center"><%= banner.id %></td>
 					<td><%= image_tag banner.image.variant(resize_to_limit: [100,100]) %></td>
 					<td><h5 class="fs-14 mb-0"><%= link_to raw(banner.title), admins_banner_path(banner), class: "text-primary" %></h5></td>
-					<td><%= banner.try(:banner_section).try(:name_id_label) %></td>
-					<td><%= badge_true_false_status banner.has_link_button? %></td>
 					<td>
 						<div class="dropdown">
 							<button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">

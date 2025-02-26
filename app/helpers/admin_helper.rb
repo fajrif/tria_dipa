@@ -278,7 +278,8 @@ module AdminHelper
   end
 
   def is_admins_articles_page?
-		controller.controller_name == "articles"
+		controller.controller_name == "articles" ||
+    controller.controller_name == "categories"
   end
 
   def is_admins_archives_page?
@@ -294,6 +295,7 @@ module AdminHelper
   end
 
 	def is_admins_others_page?
+    controller.controller_name == "banners" ||
 		controller.controller_name == "doctors" ||
 		controller.controller_name == "specialists" ||
 		controller.controller_name == "addresses" ||

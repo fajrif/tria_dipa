@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def index
 		# get public home
+		@banners = Banner.all
 		@articles = Article.first(4)
 		@facilities = Facility.all
 		@events = Event.where(date: Date.today)

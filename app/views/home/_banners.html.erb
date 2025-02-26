@@ -1,5 +1,11 @@
 <section class="banner-section-ten">
-	<video class="htms-video" poster="<%= image_url('banner-home2.png') %>" autoplay loop muted playsinline>
-		<source type="video/mp4" src="<%= asset_url('triadipa_motion_banner.mp4') %>">
-	</video>
+       <div class="banner-carousel owl-carousel owl-theme default-nav">
+		   	<% @banners.each do |banner| %>
+               <div class="item">
+			   		<video class="htms-video" poster="<%= url_for(banner.image) %>" autoplay loop muted playsinline>
+			   			<source type="video/mp4" src="<%= url_for(banner.video) if banner.video.attached? %>">
+			   		</video>
+               </div>
+			<% end %>
+       </div>
 </section>

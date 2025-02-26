@@ -22,7 +22,7 @@
 							</div>
 						</div>
 						<%= f.input :image, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
-						<%= f.input :file, as: :file, input_html: { class: "mb-3", accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/msword' } %>
+						<%= f.input :thumbnail, as: :file, input_html: { class: "mb-3", accept: "image/gif, image/png, image/jpg, image/jpeg" } %>
 						<%= f.input :title, as: :string %>
 						<%= f.input :short_description, as: :text %>
 						<%= f.input :content, as: :rich_text_area %>

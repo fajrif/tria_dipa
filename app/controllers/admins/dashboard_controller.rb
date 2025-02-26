@@ -2,9 +2,9 @@ class Admins::DashboardController < Admins::BaseController
 
   def index
 		@total_articles = Article.count
-		@total_reports = Report.count
-		@total_archives = Archive.count
-		@total_inguiries = Contact.count
+		@total_events = Event.count
+		@total_testimonials = Testimonial.count
+		@total_facilities = Facility.count
   end
 
 end

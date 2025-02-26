@@ -14,6 +14,17 @@
 		</td>
 	</tr>
 	<% end %>
+	<% if @article.thumbnail.attached? %>
+	<tr>
+		<td><b>thumbnail</b></td>
+		<td>
+			<%= image_tag @article.thumbnail.variant(resize_to_limit: [100,100]) %>
+			<%= link_to delete_attachment_image_admins_article_path(@article.id, @article.thumbnail.id), :class => "ms-2 btn btn-danger btn-sm", :data => { :confirm => 'Are You sure want to delete this image?' }, :method => :delete do %>
+				<i class="ri-delete-bin-fill"></i>
+			<% end %>
+		</td>
+	</tr>
+	<% end %>
 	<tr>
 		<td><b>Title</b></td>
 		<td><h5 class="fs-14 mb-0 text-body"><%= @article.title %></h5></td>

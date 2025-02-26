@@ -28,6 +28,10 @@ module ApplicationHelper
 	def get_address
 		@address ||= Address.first
 	end
+  
+	def get_about
+		@about ||= About.first
+	end
 
 	def is_home_page?
 		controller.controller_name == "home" && controller.action_name == "index"

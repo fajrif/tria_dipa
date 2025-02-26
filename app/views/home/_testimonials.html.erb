@@ -25,14 +25,6 @@
 					<div class="content">
 						<p><%= testimonial.comment %></p>
 					</div>
-
-					<div class="image">
-						<% if testimonial.photo.attached? %>
-							<img class="mx-auto" src="<%= url_for(testimonial.photo.variant(resize_to_limit: [80,80])) %>" alt="<%= testimonial.full_name %>">
-						<% else %>
-							<%= image_tag('default-testimonial.png', class: "mx-auto") %>
-						<% end %>
-					</div>
 					<div class="author">
 						<div class="name"><%= testimonial.full_name %></div>
 					</div>

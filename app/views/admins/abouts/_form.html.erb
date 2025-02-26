@@ -1,0 +1,28 @@
+<%= simple_form_for @about, url: admins_about_path, method: :put do |f| %>
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="card">
+				<div class="card-body">
+					<%= f.error_notification %>
+					<fieldset>
+						<%= f.input :title, as: :string %>
+						<%= f.input :description1, as: :text %>
+						<%= f.input :description2, as: :text %>
+						<%= f.input :vision, as: :text %>
+						<%= f.input :mission, as: :text %>
+					</fieldset>
+					<%= f.error :base %>
+					<div class="form-actions">
+						<%= f.button :submit, :class => 'btn btn-secondary' %>
+						<%= link_to "Cancel", admins_about_path, :class => 'btn btn-light' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="row">
+				<%= render "admins/shared/error_messages", :target => @about, col: 'col-lg-12' %>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -15,46 +15,16 @@ Rails.application.routes.draw do
 			get "account/change_password" => "accounts#change_password", :as => :change_password
 			put "account/update_password" => "accounts#update_password", :as => :update_password
 
-			get "link_buttons/objectable_types" => "link_buttons#objectable_types", :as => :link_button_objectable_types
-
-			resources :banners do
-				resources :link_buttons, :controller => "banners/link_buttons", :except => [:index, :show]
-			end
-			resources :banner_sections
-
+			resource :banners
+      resource :about, except: [:new, :create, :destroy]
 			resources :admins
-			resources :menus
-			resource :setting
 			resources :articles do
 				member do
 					delete "delete_attachment/:asset_id" => "articles#delete_attachment", :as => :delete_attachment
 					delete "delete_attachment_image/:asset_id" => "articles#delete_attachment_image", :as => :delete_attachment_image
 				end
 			end
-			resources :pages do
-				resources :sections, :controller => "pages/sections", :except => [:index] do
-					collection do
-						patch :sort
-					end
-				end
-				resources :banners, :controller => "pages/banners", :only => [:destroy] do
-					collection do
-						patch :sort
-					end
-				end
-			end
-			resources :snippets do
-				resources :link_buttons, :controller => "snippets/link_buttons", :except => [:index, :show]
-				member do
-					delete "delete_attachment/:asset_id" => "snippets#delete_attachment", :as => :delete_attachment
-				end
-			end
 			resources :categories
-			resources :reports
-			resources :report_types
-			resources :contacts, :only => [:index, :show, :destroy]
-			resources :archives
-			resources :archive_types
 			resources :questions
 			resources :specialists
 			resources :testimonials
@@ -74,7 +44,6 @@ Rails.application.routes.draw do
 					delete "delete_attachment_image/:asset_id" => "doctors#delete_attachment_image", :as => :delete_attachment_image
 				end
 			end
-			resources :appointments
 			resources :events
 			resources :addresses do
 				collection do
@@ -88,8 +57,6 @@ Rails.application.routes.draw do
 		resource :contact, :only => [:show]
 		resources :articles, :only => [:index, :show]
 		resources :facilities, :only => [:index, :show]
-		resources :appointments, :only => [:new, :create]
-		# resources :institutions, :only => [:index, :show]
 		resources :doctors, :only => [:show]
 		resources :specialists, :only => [:index, :show]
 
