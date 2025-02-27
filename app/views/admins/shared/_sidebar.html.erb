@@ -48,6 +48,9 @@
 					<div class="collapse menu-dropdown <%= 'show' if is_admins_others_page? %>" id="sidebarOther">
 						<ul class="nav nav-sm flex-column">
 							<li class="nav-item">
+								<a href="<%= admins_about_path %>" class="nav-link <%= current_path?('about') %>">About</a>
+							</li>
+							<li class="nav-item">
 								<a href="<%= admins_banners_path %>" class="nav-link <%= current_path?('banners') %>">Banners</a>
 							</li>
 							<li class="nav-item">
@@ -73,6 +76,12 @@
 							</li>
 							<li class="nav-item">
 								<a href="<%= admins_events_path %>" class="nav-link <%= current_path?('events') %>">Events</a>
+							</li>
+							<li class="nav-item">
+								<a href="<%= admins_partners_path %>" class="nav-link <%= current_path?('partners') %>">Partners</a>
+							</li>
+							<li class="nav-item">
+								<a href="<%= admins_careers_path %>" class="nav-link <%= current_path?('careers') %>">Careers</a>
 							</li>
 						</ul>
 					</div>

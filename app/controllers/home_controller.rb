@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 		@facilities = Facility.all
 		@events = Event.where(date: Date.today)
 		@specialists = Specialist.all
+		@partners = Partner.all
 		if @specialist = @specialists.first
 			@doctors = @specialist.doctors
 		end

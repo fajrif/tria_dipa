@@ -15,8 +15,10 @@ Rails.application.routes.draw do
 			get "account/change_password" => "accounts#change_password", :as => :change_password
 			put "account/update_password" => "accounts#update_password", :as => :update_password
 
-			resource :banners
       resource :about, except: [:new, :create, :destroy]
+			resources :banners
+			resources :careers
+			resources :partners
 			resources :admins
 			resources :articles do
 				member do
@@ -59,6 +61,7 @@ Rails.application.routes.draw do
 		resources :facilities, :only => [:index, :show]
 		resources :doctors, :only => [:show]
 		resources :specialists, :only => [:index, :show]
+		resources :careers, :only => [:index, :show]
 
 		match 'terms', to: 'home#terms', via: :get, as: :terms
 		match 'privacy', to: 'home#privacy', via: :get, as: :privacy

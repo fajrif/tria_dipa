@@ -1,0 +1,32 @@
+<section class="layout-pt-60 layout-pb-100">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700">CAREERS PAGE</h2>
+				<div class="text">Vacancies at Tria Dipa Hospital</div>
+			</div>
+		</div>
+
+		<div class="row grid-base pt-50 wow fadeInUp">
+			<% unless @careers.empty? %>
+				<% @careers.each do |career| %>
+				<!-- Blog Block -->
+				<div class="col-md-12">
+					<div class="blog -type-1">
+						<div class="blog-content mt-0">
+							<h4><%= link_to career.title, career_path(career) %></h4>
+							<div class="mb-0"><%= career.date.strftime('%d/%m/%Y') %></div>
+						</div>
+					</div>
+				</div>
+				<% end %>
+			<% else %>
+				<div class="col-lg-12">
+					<h3>Oops! Not found...</h3>
+				</div>
+			<% end %>
+			<!-- Pagination -->
+			<%= paginate @careers, theme: :superio %>
+		</div>
+	</div>
+</section>

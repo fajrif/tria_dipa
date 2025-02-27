@@ -1,0 +1,29 @@
+<!-- Blog Single -->
+<section class="blog-single">
+	<div class="auto-container">
+		<div class="row justify-content-center align-items-center text-center">
+			<div class="section-title-page col-lg-12">
+				<h2 class="fw-700"><%= @career.title %></h2>
+				<div style="line-height:22px;"><%= @career.date.strftime('%d/%m/%Y') %></div>
+			</div>
+		</div>
+	</div>
+	<div class="auto-container">
+		<div class="row pt-50 justify-content-between">
+			<div class="col-lg-12">
+				<div class="margin-left-right-100">
+					<%= raw @career.description %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Blog Single -->
+<%= content_for :tail do %>
+<style>
+	.blog-single .img1 > img,
+	.blog-single .img2 > img {
+		width: 80%;
+	}
+</style>
+<% end %>

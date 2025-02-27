@@ -290,12 +290,13 @@ module AdminHelper
   def is_admins_content_page?
 		controller.controller_name == "pages" ||
 		controller.controller_name == "banner_sections" ||
-		controller.controller_name == "banners" ||
 		controller.controller_name == "snippets"
   end
 
 	def is_admins_others_page?
     controller.controller_name == "banners" ||
+    controller.controller_name == "abouts" ||
+    controller.controller_name == "partners" ||
 		controller.controller_name == "doctors" ||
 		controller.controller_name == "specialists" ||
 		controller.controller_name == "addresses" ||
@@ -303,6 +304,7 @@ module AdminHelper
 		controller.controller_name == "questions" ||
 		controller.controller_name == "testimonials" ||
 		controller.controller_name == "events" ||
+		controller.controller_name == "careers" ||
 		controller.controller_name == "institutions"
 	end
 

@@ -1,27 +1,29 @@
-<%= simple_form_for @about, url: admins_about_path, method: :put do |f| %>
+<%= simple_form_for @career, url: (@career.new_record? ? admins_careers_path : admins_career_path(@career.id)), method: (@career.new_record? ? :post : :put) do |f| %>
 	<div class="row">
 		<div class="col-lg-8">
 			<div class="card">
 				<div class="card-body">
 					<%= f.error_notification %>
 					<fieldset>
+						<%= f.input :date, as: :string, input_html: { class: "datepicker", value: get_input_date_value(f.object.date) } %>
 						<%= f.input :title, as: :string %>
-						<%= f.input :description1, as: :rich_text_area %>
-						<%= f.input :description2, as: :rich_text_area %>
-						<%= f.input :vision, as: :text %>
-						<%= f.input :mission, as: :text %>
+						<%= f.input :description, as: :rich_text_area %>
 					</fieldset>
 					<%= f.error :base %>
 					<div class="form-actions">
 						<%= f.button :submit, :class => 'btn btn-secondary' %>
-						<%= link_to "Cancel", admins_about_path, :class => 'btn btn-light' %>
+						<% unless @career.new_record? %>
+							<%= link_to "Cancel", admins_career_path(@career.id), :class => 'btn btn-light' %>
+						<% else %>
+							<%= link_to "Cancel", admins_careers_path, :class => 'btn btn-light' %>
+						<% end %>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4">
 			<div class="row">
-				<%= render "admins/shared/error_messages", :target => @about, col: 'col-lg-12' %>
+				<%= render "admins/shared/error_messages", :target => @career, col: 'col-lg-12' %>
 			</div>
 		</div>
 	</div>
